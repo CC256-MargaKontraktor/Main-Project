@@ -1,7 +1,6 @@
-
-/* palet warna sesuai logo */
+/* Palet warna sesuai logo */
 :root {
-  --biru-utama:#003882;
+  --biru-utama: #003882;
   --biru-gelap: #002459;
   --kuning-brand: #FFC600;
   --kuning-hover: #E5B200;
@@ -14,9 +13,14 @@ html {
 
 body {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--teks-utama);
 }
 
-/* styling Header-Navbar */
+section {
+  scroll-margin-top: 70px;
+}
+
+/* ===== HEADER & NAVBAR ===== */
 .navbar {
   background-color: var(--biru-utama);
   border-bottom: 3px solid var(--kuning-brand);
@@ -32,17 +36,17 @@ body {
 }
 
 .navbar .nav-link {
-  color: rgba(255, 255, 255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
-  transition: color 0.2 ease;
+  transition: color 0.2s ease;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: var(--kuning-brand)
+  color: var(--kuning-brand);
 }
 
-/* tombol kuning brand */
+/* Tombol Brand */
 .btn-brand-yellow {
   background-color: var(--kuning-brand);
   color: var(--biru-gelap);
@@ -55,29 +59,34 @@ body {
   color: var(--biru-gelap);
 }
 
-@media (max-width: 767.98px) {
-  .brand-logo {
-    height: 38px;
-    width: 125px;
-  }
+.btn-brand-blue {
+  background-color: var(--biru-utama);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
 }
 
-/* Tahap 2 hero section */
+.btn-brand-blue:hover {
+  background-color: var(--biru-gelap);
+  color: var(--kuning-brand);
+}
+
+/* ===== HERO SECTION ===== */
 .hero-section {
-  background-color: linier-gradient(135deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
+  background: linear-gradient(135deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
   min-height: 82vh;
 }
 
 .badge-brand {
-  background-color: rgba(255, 192, 0, 0.16);
+  background-color: rgba(255, 198, 0, 0.16);
   color: var(--kuning-brand);
-  border: 1px solid rgba(255, 192, 0, 0.45);
+  border: 1px solid rgba(255, 198, 0, 0.45);
   border-radius: 50px;
 }
 
 .hero-card {
   background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 198, 0,  0.35);
+  border: 1px solid rgba(255, 198, 0, 0.35);
   backdrop-filter: blur(6px);
 }
 
@@ -95,27 +104,181 @@ body {
   font-weight: bold;
 }
 
-/* penyesuaian hero di layar hp */
-@media (max-width:767.98px) {
-  .hero-section {
-    min-height: auto;
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
+/* ===== UPGRADE KHUSUS BERANDA ===== */
+.hero-visual-wrap {
+  position: relative;
+  padding-bottom: 1.5rem;
 }
 
-
-/* Tahap 3: styling profile, alur kerja & layanan */
-.section {
-  scroll-margin-top: 70px;
+.hero-visual-frame {
+  position: relative;
+  height: 400px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 3px solid rgba(255, 198, 0, 0.45);
+  background-color: #0B192C;
 }
 
+.hero-visual-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-float-card {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0;
+  background: rgba(11, 25, 44, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 198, 0, 0.35);
+  border-radius: 1rem;
+  padding: 0.9rem 1.1rem;
+}
+
+.trust-strip {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E6EDF7;
+}
+
+.trust-item-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #E8F0FE;
+  color: var(--biru-utama);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+/* Interactive Before-After Slider (3D vs Realisasi) */
+.ba-slider {
+  --pos: 50%;
+  position: relative;
+  height: 290px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #0B192C;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.ba-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.ba-slider .ba-before {
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+  z-index: 2;
+}
+
+.ba-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 3px;
+  background-color: var(--kuning-brand);
+  transform: translateX(-50%);
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+}
+
+.ba-handle {
+  position: absolute;
+  top: 50%;
+  left: var(--pos);
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--kuning-brand);
+  color: var(--biru-utama);
+  border: 3px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.ba-handle i {
+  transform: rotate(90deg);
+}
+
+.ba-range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 4;
+}
+
+.ba-badge {
+  position: absolute;
+  top: 12px;
+  z-index: 3;
+  pointer-events: none;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.65rem;
+}
+
+/* Kolase Foto Progres Lapangan */
+.field-photo-box {
+  position: relative;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #E8F0FE;
+}
+
+.field-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.obj-pos-35 {
+  object-position: center 35%;
+}
+
+.obj-pos-45 {
+  object-position: center 45%;
+}
+
+/* ===== PROFIL, ALUR KERJA & LAYANAN ===== */
 .bg-surface {
-  background-color:#F4F7FC ;
+  background-color: #F4F7FC;
 }
 
 .text-biru {
   color: var(--biru-utama);
+}
+
+.bg-biru {
+  background-color: var(--biru-utama);
+}
+
+.bg-biru-gradient {
+  background: linear-gradient(180deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
 }
 
 .section-tag {
@@ -130,9 +293,9 @@ body {
   border-left: 4px solid var(--kuning-brand);
 }
 
-.highlight-box  {
+.highlight-box {
   background-color: #F4F7FC;
-  border-left: 4px solid var(--kuning-brand)
+  border-left: 4px solid var(--kuning-brand);
 }
 
 .workflow-card {
@@ -160,13 +323,13 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-service-card:hover{
+.service-card:hover {
   transform: translateY(-5px);
   border-top-color: var(--kuning-brand) !important;
   box-shadow: 0 10px 24px rgba(0, 56, 130, 0.1) !important;
 }
 
-.service-icon { 
+.service-icon {
   width: 52px;
   height: 52px;
   border-radius: 12px;
@@ -178,19 +341,18 @@ service-card:hover{
   justify-content: center;
 }
 
-
-/* TAHAP 4: STYLING PORTOFOLIO & FAQ */
-.portofolio-card {
-  transition: transform 0.2s ease, box-shadow 0.2 ease;
+/* ===== PORTOFOLIO & FAQ ===== */
+.portfolio-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 1px solid #E6ECF5 !important;
 }
 
-.portofolio-card:hover {
+.portfolio-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 56, 130, 0.12) !important;
 }
 
-.portofolio-img {
+.portfolio-badge {
   background-color: var(--biru-utama);
   color: var(--kuning-brand);
   font-weight: 600;
@@ -198,205 +360,344 @@ service-card:hover{
   border-radius: 8px;
 }
 
-/* Styling Accordion FAQ supaya selaras dengan Tema */
-.accordion-button:not(.collapse) {
+.accordion-button:not(.collapsed) {
   background-color: #E8F0FE;
   color: var(--biru-utama);
   box-shadow: inset 0 -1px 0 rgba(0, 56, 130, 0.12);
 }
 
-.accordion-button:focuis {
+.accordion-button:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 56, 130, 0.2);
 }
 
-/* ===== TAHAP 5: STYLING SIMULASI ANGGARAN & FORM KONSULTASI ===== */
-.bg-biru-gradient {
-    background: linear-gradient(180deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
-}
-
-.bg-biru {
-    background-color: var(--biru-utama);
-}
-
+/* ===== SIMULASI ANGGARAN & FORM KONSULTASI ===== */
 .estimasi-result-card {
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 198, 0, 0.35);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 198, 0, 0.35);
 }
 
 .penjelasan-ai-box {
-    background-color: rgba(0, 20, 50, 0.45);
-    border: 1px solid rgba(255, 198, 0, 0.4);
+  background-color: rgba(0, 20, 50, 0.45);
+  border: 1px solid rgba(255, 198, 0, 0.4);
 }
 
 .contact-icon {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-brand-blue {
-    background-color: var(--biru-utama);
-    color: #FFFFFF;
-    border: none;
-    border-radius: 8px;
-}
-
-.btn-brand-blue:hover {
-    background-color: var(--biru-gelap);
-    color: var(--kuning-brand);
-}
-
-
-/* ===== TAHAP 6: STYLING FOOTER, MOBILE NAV & CHATBOT ===== */
+/* ===== FOOTER, MOBILE NAV & CHATBOT ===== */
 .footer-section {
-    background-color: var(--biru-gelap);
-    border-top: 4px solid var(--kuning-brand);
+  background-color: var(--biru-gelap);
+  border-top: 4px solid var(--kuning-brand);
 }
 
 .footer-link {
-    color: rgba(255, 255, 255, 0.75);
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .footer-link:hover {
-    color: var(--kuning-brand);
+  color: var(--kuning-brand);
 }
 
 .text-kuning-gelap {
-    color: #D9A400;
+  color: #D9A400;
 }
 
-/* Navigasi Bawah Khusus HP */
 .mobile-bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 64px;
-    background-color: #FFFFFF;
-    border-top: 2px solid #E8F0FE;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1030;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: #FFFFFF;
+  border-top: 2px solid #E8F0FE;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1030;
 }
 
 .nav-item-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: var(--biru-utama);
-    font-size: 0.72rem;
-    font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--biru-utama);
+  font-size: 0.72rem;
+  font-weight: 500;
 }
 
 .nav-item-mobile i {
-    font-size: 1.2rem;
-    margin-bottom: 2px;
+  font-size: 1.2rem;
+  margin-bottom: 2px;
 }
 
-/* Tombol & Jendela Chatbot Desktop */
 .chat-fab {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    border-radius: 50px;
-    padding: 12px 22px;
-    z-index: 1040;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  border-radius: 50px;
+  padding: 12px 22px;
+  z-index: 1040;
 }
 
 .chat-box {
-    position: fixed;
-    bottom: 86px;
-    right: 24px;
-    width: 370px;
-    height: 500px;
-    background-color: #F4F7FC;
-    border-radius: 16px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    z-index: 1050;
-    border: 1px solid rgba(0, 56, 130, 0.2);
+  position: fixed;
+  bottom: 86px;
+  right: 24px;
+  width: 370px;
+  height: 500px;
+  background-color: #F4F7FC;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 1050;
+  border: 1px solid rgba(0, 56, 130, 0.2);
 }
 
 .chat-header {
-    border-bottom: 3px solid var(--kuning-brand);
+  border-bottom: 3px solid var(--kuning-brand);
 }
 
 .chat-avatar {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: var(--kuning-brand);
-    color: var(--biru-gelap);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--kuning-brand);
+  color: var(--biru-gelap);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .chat-messages {
-    flex: 1;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .chat-bubble {
-    max-width: 85%;
-    padding: 10px 14px;
-    border-radius: 14px;
-    font-size: 0.88rem;
-    line-height: 1.45;
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 
 .chat-bubble.bot {
-    background-color: #FFFFFF;
-    color: var(--teks-utama);
-    align-self: flex-start;
-    border: 1px solid #DCE6F7;
+  background-color: #FFFFFF;
+  color: var(--teks-utama);
+  align-self: flex-start;
+  border: 1px solid #DCE6F7;
 }
 
 .chat-bubble.user {
-    background-color: var(--biru-utama);
-    color: #FFFFFF;
-    align-self: flex-end;
-    font-weight: 500;
+  background-color: var(--biru-utama);
+  color: #FFFFFF;
+  align-self: flex-end;
+  font-weight: 500;
 }
 
 .chat-chip {
-    background-color: #E8F0FE;
-    color: var(--biru-utama);
-    border: 1px solid #C5D7F7;
-    border-radius: 50px;
-    font-size: 0.76rem;
-    padding: 4px 10px;
+  background-color: #E8F0FE;
+  color: var(--biru-utama);
+  border: 1px solid #C5D7F7;
+  border-radius: 50px;
+  font-size: 0.76rem;
+  padding: 4px 10px;
 }
 
 .chat-chip:hover {
-    background-color: var(--kuning-brand);
-    color: var(--biru-gelap);
-    border-color: var(--kuning-brand);
+  background-color: var(--kuning-brand);
+  color: var(--biru-gelap);
+  border-color: var(--kuning-brand);
 }
 
-/* Aturan Responsif Khusus Layar HP (< 768px) */
-@media (max-width: 767.98px) {
-    .pb-mobile-nav {
-        padding-bottom: 84px !important;
-    }
+/* ===== SUB-HALAMAN & FILTER PORTOFOLIO ===== */
+.page-header {
+  background: linear-gradient(135deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
+  border-bottom: 4px solid var(--kuning-brand);
+}
 
-    .chat-box {
-        inset: 0;
-        width: 100%;
-        height: 100dvh;
-        border-radius: 0;
-    }
+.page-header .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.btn-filter {
+  background-color: #FFFFFF;
+  color: var(--biru-utama);
+  border: 1.5px solid #D5E2F5;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.btn-filter:hover {
+  border-color: var(--biru-utama);
+  background-color: #E8F0FE;
+  color: var(--biru-utama);
+}
+
+.btn-filter.active {
+  background-color: var(--biru-utama);
+  color: var(--kuning-brand);
+  border-color: var(--biru-utama);
+}
+
+.service-detail-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.service-detail-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--biru-utama);
+  font-weight: 700;
+}
+
+/* ===== GALERI MODAL PORTOFOLIO (SLIDER + THUMBNAIL) ===== */
+.gallery-stage {
+  background-color: #0B192C;
+  height: 390px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gallery-stage img {
+  width: 100%;
+  height: 390px;
+  object-fit: contain;
+}
+
+.gallery-caption-bar {
+  background-color: #F4F7FC;
+  border: 1px solid #DCE6F7;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.gallery-thumb {
+  width: 72px;
+  height: 54px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 0;
+  background-color: #0B192C;
+  transition: all 0.2s ease;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-thumb:hover,
+.gallery-thumb.active {
+  opacity: 1;
+  border-color: var(--kuning-brand);
+}
+
+/* ===== BINGKAI GAMBAR ANTI-COLLAPSE ===== */
+.compare-img-wrap {
+  position: relative;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #E8F0FE;
+}
+
+.compare-img-wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.portfolio-img-wrap {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  background-color: #E8F0FE;
+}
+
+.portfolio-img-wrap .portfolio-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===== RESPONSIF ===== */
+@media (max-width: 991.98px) {
+  .hero-visual-frame {
+    height: 300px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .brand-logo {
+    height: 38px;
+    width: 125px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .pb-mobile-nav {
+    padding-bottom: 84px !important;
+  }
+
+  .chat-box {
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ba-slider {
+    height: 230px;
+  }
+
+  .field-photo-box {
+    height: 200px;
+  }
+
+  .gallery-stage,
+  .gallery-stage img {
+    height: 280px;
+  }
 }

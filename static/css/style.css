@@ -1,0 +1,402 @@
+
+/* palet warna sesuai logo */
+:root {
+  --biru-utama:#003882;
+  --biru-gelap: #002459;
+  --kuning-brand: #FFC600;
+  --kuning-hover: #E5B200;
+  --teks-utama: #1b2430;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* styling Header-Navbar */
+.navbar {
+  background-color: var(--biru-utama);
+  border-bottom: 3px solid var(--kuning-brand);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.brand-logo {
+  height: 44px;
+  width: 145px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255,0.9);
+  font-weight: 500;
+  transition: color 0.2 ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--kuning-brand)
+}
+
+/* tombol kuning brand */
+.btn-brand-yellow {
+  background-color: var(--kuning-brand);
+  color: var(--biru-gelap);
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-brand-yellow:hover {
+  background-color: var(--kuning-hover);
+  color: var(--biru-gelap);
+}
+
+@media (max-width: 767.98px) {
+  .brand-logo {
+    height: 38px;
+    width: 125px;
+  }
+}
+
+/* Tahap 2 hero section */
+.hero-section {
+  background-color: linier-gradient(135deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
+  min-height: 82vh;
+}
+
+.badge-brand {
+  background-color: rgba(255, 192, 0, 0.16);
+  color: var(--kuning-brand);
+  border: 1px solid rgba(255, 192, 0, 0.45);
+  border-radius: 50px;
+}
+
+.hero-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 198, 0,  0.35);
+  backdrop-filter: blur(6px);
+}
+
+.hero-mini-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
+  background-color: var(--kuning-brand);
+  color: var(--biru-gelap);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* penyesuaian hero di layar hp */
+@media (max-width:767.98px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+
+/* Tahap 3: styling profile, alur kerja & layanan */
+.section {
+  scroll-margin-top: 70px;
+}
+
+.bg-surface {
+  background-color:#F4F7FC ;
+}
+
+.text-biru {
+  color: var(--biru-utama);
+}
+
+.section-tag {
+  display: inline-block;
+  background-color: #E8F0FE;
+  color: var(--biru-utama);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border-left: 4px solid var(--kuning-brand);
+}
+
+.highlight-box  {
+  background-color: #F4F7FC;
+  border-left: 4px solid var(--kuning-brand)
+}
+
+.workflow-card {
+  background-color: #F4F7FC;
+  border: 1px solid #DCE6F7;
+}
+
+.step-number {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  background-color: var(--biru-utama);
+  color: var(--kuning-brand);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.service-card {
+  background-color: #FFFFFF;
+  border-top: 4px solid transparent !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+service-card:hover{
+  transform: translateY(-5px);
+  border-top-color: var(--kuning-brand) !important;
+  box-shadow: 0 10px 24px rgba(0, 56, 130, 0.1) !important;
+}
+
+.service-icon { 
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background-color: #E8F0FE;
+  color: var(--biru-utama);
+  border-bottom: 3px solid var(--kuning-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* TAHAP 4: STYLING PORTOFOLIO & FAQ */
+.portofolio-card {
+  transition: transform 0.2s ease, box-shadow 0.2 ease;
+  border: 1px solid #E6ECF5 !important;
+}
+
+.portofolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 56, 130, 0.12) !important;
+}
+
+.portofolio-img {
+  background-color: var(--biru-utama);
+  color: var(--kuning-brand);
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* Styling Accordion FAQ supaya selaras dengan Tema */
+.accordion-button:not(.collapse) {
+  background-color: #E8F0FE;
+  color: var(--biru-utama);
+  box-shadow: inset 0 -1px 0 rgba(0, 56, 130, 0.12);
+}
+
+.accordion-button:focuis {
+  box-shadow: 0 0 0 0.2rem rgba(0, 56, 130, 0.2);
+}
+
+/* ===== TAHAP 5: STYLING SIMULASI ANGGARAN & FORM KONSULTASI ===== */
+.bg-biru-gradient {
+    background: linear-gradient(180deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
+}
+
+.bg-biru {
+    background-color: var(--biru-utama);
+}
+
+.estimasi-result-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 198, 0, 0.35);
+}
+
+.penjelasan-ai-box {
+    background-color: rgba(0, 20, 50, 0.45);
+    border: 1px solid rgba(255, 198, 0, 0.4);
+}
+
+.contact-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-brand-blue {
+    background-color: var(--biru-utama);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-brand-blue:hover {
+    background-color: var(--biru-gelap);
+    color: var(--kuning-brand);
+}
+
+
+/* ===== TAHAP 6: STYLING FOOTER, MOBILE NAV & CHATBOT ===== */
+.footer-section {
+    background-color: var(--biru-gelap);
+    border-top: 4px solid var(--kuning-brand);
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--kuning-brand);
+}
+
+.text-kuning-gelap {
+    color: #D9A400;
+}
+
+/* Navigasi Bawah Khusus HP */
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background-color: #FFFFFF;
+    border-top: 2px solid #E8F0FE;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1030;
+}
+
+.nav-item-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--biru-utama);
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.nav-item-mobile i {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+/* Tombol & Jendela Chatbot Desktop */
+.chat-fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    border-radius: 50px;
+    padding: 12px 22px;
+    z-index: 1040;
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 86px;
+    right: 24px;
+    width: 370px;
+    height: 500px;
+    background-color: #F4F7FC;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1050;
+    border: 1px solid rgba(0, 56, 130, 0.2);
+}
+
+.chat-header {
+    border-bottom: 3px solid var(--kuning-brand);
+}
+
+.chat-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: var(--kuning-brand);
+    color: var(--biru-gelap);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-bubble {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.chat-bubble.bot {
+    background-color: #FFFFFF;
+    color: var(--teks-utama);
+    align-self: flex-start;
+    border: 1px solid #DCE6F7;
+}
+
+.chat-bubble.user {
+    background-color: var(--biru-utama);
+    color: #FFFFFF;
+    align-self: flex-end;
+    font-weight: 500;
+}
+
+.chat-chip {
+    background-color: #E8F0FE;
+    color: var(--biru-utama);
+    border: 1px solid #C5D7F7;
+    border-radius: 50px;
+    font-size: 0.76rem;
+    padding: 4px 10px;
+}
+
+.chat-chip:hover {
+    background-color: var(--kuning-brand);
+    color: var(--biru-gelap);
+    border-color: var(--kuning-brand);
+}
+
+/* Aturan Responsif Khusus Layar HP (< 768px) */
+@media (max-width: 767.98px) {
+    .pb-mobile-nav {
+        padding-bottom: 84px !important;
+    }
+
+    .chat-box {
+        inset: 0;
+        width: 100%;
+        height: 100dvh;
+        border-radius: 0;
+    }
+}

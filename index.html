@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marga Kontraktor - Jasa Desain &amp; Bangun Rumah</title>
+
+    <!-- Ikon Tab Title -->
+    <link rel="icon" type="image/png" href="static/img/LOGO.PNG" />
+
+    <!-- Bootstrap 5 & Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- CSS Manual -->
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+
+    <!-- ===== TAHAP 1: HEADER & NAVBAR ===== -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+          <!-- Logo Marga Kontraktor -->
+          <a href="#beranda" class="navbar-brand d-flex align-items-center py-0">
+            <img src="static/img/LOGO.PNG" alt="Marga Kontraktor" class="brand-logo" />
+          </a>
+
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#tabMenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="tabMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3 pt-3 pt-lg-0">
+              <li class="nav-item">
+                <a href="#beranda" class="nav-link active">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a href="#profil" class="nav-link">Profil</a>
+              </li>
+              <li class="nav-item">
+                <a href="#layanan" class="nav-link">Layanan</a>
+              </li>
+              <li class="nav-item">
+                <a href="#portofolio" class="nav-link">Portofolio</a>
+              </li>
+              <li class="nav-item">
+                <a href="#anggaran" class="nav-link">Simulasi Biaya</a>
+              </li>
+              <li class="nav-item">
+                <a href="#faq" class="nav-link">FAQ</a>
+              </li>
+              <li class="nav-item mt-2 mt-lg-0">
+                <a href="#konsultasi" class="btn btn-brand-yellow fw-semibold px-3">Konsultasi</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      
+      <!-- ===== TAHAP 2: HERO SECTION ===== -->
+      <section id="beranda" class="hero-section text-white d-flex align-items-center" style="background-color: #003882;">
+        <div class="container py-5">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <span class="badge badge-brand mb-3 px-3 py-2 fw-semibold">
+                <i class="bi bi-house-check-fill me-1"></i> Jasa Desain &amp; Konstruksi Rumah
+              </span>
+              <h1 class="display-5 fw-bold mb-3">
+                Wujudkan Rumah Impian Sesuai Kebutuhan &amp; Anggaran Anda
+              </h1>
+              <p class="lead text-light opacity-75 mb-4">
+                Layanan terpadu mulai dari konsultasi konsep desain, gambar teknis, penyusunan RAB transparan, hingga pembangunan rumah tinggal dengan laporan progres mingguan.
+              </p>
+
+              <!-- Tombol Utama -->
+              <div class="d-flex flex-wrap gap-3 mb-4">
+                <a href="#anggaran" class="btn btn-brand-yellow btn-lg fw-bold px-4">
+                  <i class="bi bi-calculator me-2"></i>Coba Simulasi Anggaran
+                </a>
+                <a href="#portofolio" class="btn btn-outline-light btn-lg px-4">
+                  Lihat Portofolio
+                </a>
+              </div>
+
+              <!-- Poin Keunggulan -->
+              <div class="d-flex flex-wrap gap-4 pt-2 border-top border-light border-opacity-25 small">
+                <div><i class="bi bi-check-circle-fill text-warning me-1"></i>Cocok untuk tanah kavling</div>
+                <div><i class="bi bi-check-circle-fill text-warning me-1"></i>RAB Transparan</div>
+                <div><i class="bi bi-check-circle-fill text-warning me-1"></i>Laporan Progres Mingguan</div>
+              </div>
+            </div>
+
+            <!-- Kolom Kanan: Kartu Ringkasan Layanan -->
+            <div class="col-lg-5">
+              <div class="hero-card p-4 rounded-4 shadow-lg">
+                <h5 class="fw-bold text-warning mb-3">
+                  <i class="bi bi-shield-check me-2"></i>Kenapa Marga Kontraktor?
+                </h5>
+                <div class="d-flex flex-column gap-3">
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="hero-mini-icon"><i class="bi bi-sliders"></i></div>
+                    <div>
+                      <div class="fw-semibold">Desain Menyesuaikan Budget</div>
+                      <small class="text-light opacity-75">Konsep rumah dirancang selaras dengan ketersediaan dana Anda.</small>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="hero-mini-icon"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+                    <div>
+                      <div class="fw-semibold">Rincian Biaya Terbuka</div>
+                      <small class="text-light opacity-75">Penyusunan RAB jelas sejak awal sebelum pembangunan dimulai.</small>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="hero-mini-icon"><i class="bi bi-camera"></i></div>
+                    <div>
+                      <div class="fw-semibold">Pantauan Rutin Tiap Minggu</div>
+                      <small class="text-light opacity-75">Laporan progres kerja, foto lapangan, dan rincian biaya mingguan.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TAHAP 3A: PROFIL USAHA & ALUR KERJA ===== -->
+      <section id="profil" class="py-5 bg-white">
+        <div class="container py-lg-3">
+          <div class="row g-4 align-items-center">
+            <!-- Kolom Kiri: Profil & Keunggulan -->
+            <div class="col-lg-6">
+              <span class="section-tag">TENTANG KAMI</span>
+              <h2 class="fw-bold mt-2 mb-3">Mitra Terpercaya Membangun Rumah Tinggal Anda</h2>
+              <p class="text-secondary">
+                <strong>Marga Kontraktor</strong> merupakan usaha jasa desain dan konstruksi rumah tinggal milik Bapak Arpi Setiawan. Kami melayani pembangunan rumah perorangan maupun pemilik tanah kavling mulai dari tahap perencanaan hingga serah terima bangunan.
+              </p>
+              <p class="text-secondary mb-4">
+                Setiap proyek dikerjakan dengan prinsip keterbukaan anggaran dan pemantauan rutin agar pemilik rumah merasa aman dan tenang selama proses pembangunan berlangsung.
+              </p>
+
+              <!-- 2 Kartu Keunggulan -->
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="highlight-box p-3 rounded-3 h-100">
+                    <div class="fw-bold text-biru mb-1">
+                      <i class="bi bi-cash-coin me-1"></i> RAB Transparan
+                    </div>
+                    <small class="text-secondary">
+                      Perhitungan rincian biaya jelas dan dapat disesuaikan dengan kemampuan anggaran Anda.
+                    </small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="highlight-box p-3 rounded-3 h-100">
+                    <div class="fw-bold text-biru mb-1">
+                      <i class="bi bi-clipboard-check me-1"></i> Laporan Mingguan
+                    </div>
+                    <small class="text-secondary">
+                      Update progres kerja, dokumentasi foto lapangan, dan rincian biaya setiap minggu.
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kolom Kanan: Alur Kerja 4 Tahap -->
+            <div class="col-lg-6">
+              <div class="workflow-card p-4 p-md-5 rounded-4 shadow-sm">
+                <h5 class="fw-bold text-biru mb-4">
+                  <i class="bi bi-diagram-3-fill me-2"></i>Alur Kerja Pengerjaan Proyek
+                </h5>
+
+                <div class="d-flex flex-column gap-3">
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="step-number">1</div>
+                    <div>
+                      <div class="fw-bold">Diskusi Konsep &amp; Budget</div>
+                      <small class="text-secondary">Konsultasi kebutuhan ruang, gaya rumah, dan target anggaran pembangunan.</small>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="step-number">2</div>
+                    <div>
+                      <div class="fw-bold">Perancangan Desain &amp; Gambar Teknis</div>
+                      <small class="text-secondary">Pembuatan denah, desain eksterior, serta gambar struktur bangunan.</small>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="step-number">3</div>
+                    <div>
+                      <div class="fw-bold">Penyusunan &amp; Kesepakatan RAB</div>
+                      <small class="text-secondary">Penyelarasan spesifikasi material dan rincian biaya hingga disepakati bersama.</small>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="step-number">4</div>
+                    <div>
+                      <div class="fw-bold">Pelaksanaan Pembangunan</div>
+                      <small class="text-secondary">Eksekusi konstruksi oleh tim teknis disertai laporan progres mingguan.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TAHAP 3B: KATALOG LAYANAN ===== -->
+      <section id="layanan" class="py-5 bg-surface">
+        <div class="container py-lg-3">
+          <div class="text-center mx-auto mb-5" style="max-width: 640px;">
+            <span class="section-tag">KATALOG LAYANAN</span>
+            <h2 class="fw-bold mt-2 mb-2">Layanan Terpadu Desain hingga Konstruksi</h2>
+            <p class="text-secondary mb-0">
+              Empat layanan utama Marga Kontraktor untuk membantu mewujudkan hunian nyaman sesuai rencana Anda.
+            </p>
+          </div>
+
+          <!-- Grid 4 Layanan -->
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="card service-card h-100 border-0 shadow-sm rounded-4 p-3">
+                <div class="card-body">
+                  <div class="service-icon mb-3">
+                    <i class="bi bi-compass fs-4"></i>
+                  </div>
+                  <h5 class="fw-bold">Konsultasi Konsep Desain</h5>
+                  <p class="text-secondary small mb-0">
+                    Diskusi awal untuk menentukan tata ruang dan tampilan konsep rumah yang selaras dengan anggaran Anda.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="card service-card h-100 border-0 shadow-sm rounded-4 p-3">
+                <div class="card-body">
+                  <div class="service-icon mb-3">
+                    <i class="bi bi-rulers fs-4"></i>
+                  </div>
+                  <h5 class="fw-bold">Gambar Teknis &amp; Struktur</h5>
+                  <p class="text-secondary small mb-0">
+                    Pembuatan denah arsitektur, tampilan eksterior, dan gambar kerja struktur sebagai acuan konstruksi yang aman.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="card service-card h-100 border-0 shadow-sm rounded-4 p-3">
+                <div class="card-body">
+                  <div class="service-icon mb-3">
+                    <i class="bi bi-calculator fs-4"></i>
+                  </div>
+                  <h5 class="fw-bold">Penyusunan RAB</h5>
+                  <p class="text-secondary small mb-0">
+                    Perhitungan Rencana Anggaran Biaya (RAB) secara rinci dan transparan agar pengeluaran proyek terkendali.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="card service-card h-100 border-0 shadow-sm rounded-4 p-3">
+                <div class="card-body">
+                  <div class="service-icon mb-3">
+                    <i class="bi bi-bricks fs-4"></i>
+                  </div>
+                  <h5 class="fw-bold">Pelaksanaan Pembangunan</h5>
+                  <p class="text-secondary small mb-0">
+                    Pengerjaan pembangunan rumah tinggal oleh tim teknis berpengalaman dilengkapi laporan progres mingguan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TAHAP 4A: PORTOFOLIO PROYEK ===== -->
+      <section id="portofolio" class="py-5 bg-white">
+        <div class="container py-lg-3">
+          <div class="text-center mx-auto mb-5" style="max-width: 650px;">
+            <span class="section-tag">PORTOFOLIO PROYEK</span>
+            <h2 class="fw-bold mt-2 mb-2">Hasil Pekerjaan Marga Kontraktor</h2>
+            <p class="text-secondary mb-0">
+              Beberapa gambaran proyek desain dan pembangunan rumah tinggal yang dikerjakan sesuai kebutuhan lahan dan anggaran klien.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Proyek 1 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                <div class="position-relative">
+                  <img
+                    src="static/img/placeholder.svg"
+                    onerror="this.onerror=null;this.src='static/img/placeholder.svg';"
+                    class="card-img-top portfolio-img"
+                    alt="Rumah Minimalis Kavling A"
+                    loading="lazy"
+                  />
+                  <span class="badge portfolio-badge position-absolute top-0 start-0 m-3">Minimalis Modern</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="fw-bold mb-2">Rumah Minimalis Kavling A (Contoh)</h5>
+                  <p class="text-secondary small mb-3">
+                    Pembangunan rumah tinggal 1 lantai di tanah kavling dengan 2 kamar tidur, ruang keluarga terbuka, dan pencahayaan alami maksimal.
+                  </p>
+                  <div class="mt-auto pt-3 border-top d-flex flex-wrap justify-content-between gap-2 text-muted small">
+                    <span><i class="bi bi-arrows-fullscreen text-biru me-1"></i>60 m²</span>
+                    <span><i class="bi bi-layers text-biru me-1"></i>1 Lantai</span>
+                    <span><i class="bi bi-clock text-biru me-1"></i>4 Bulan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proyek 2 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                <div class="position-relative">
+                  <img
+                    src="static/img/placeholder.svg"
+                    onerror="this.onerror=null;this.src='static/img/placeholder.svg';"
+                    class="card-img-top portfolio-img"
+                    alt="Hunian Tropis 2 Lantai"
+                    loading="lazy"
+                  />
+                  <span class="badge portfolio-badge position-absolute top-0 start-0 m-3">Tropis Kontemporer</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="fw-bold mb-2">Hunian Tropis 2 Lantai (Contoh)</h5>
+                  <p class="text-secondary small mb-3">
+                    Perancangan desain dan konstruksi rumah 2 lantai dengan sirkulasi udara silang serta area taman belakang yang nyaman.
+                  </p>
+                  <div class="mt-auto pt-3 border-top d-flex flex-wrap justify-content-between gap-2 text-muted small">
+                    <span><i class="bi bi-arrows-fullscreen text-biru me-1"></i>110 m²</span>
+                    <span><i class="bi bi-layers text-biru me-1"></i>2 Lantai</span>
+                    <span><i class="bi bi-clock text-biru me-1"></i>6 Bulan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proyek 3 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                <div class="position-relative">
+                  <img
+                    src="static/img/placeholder.svg"
+                    onerror="this.onerror=null;this.src='static/img/placeholder.svg';"
+                    class="card-img-top portfolio-img"
+                    alt="Rumah Skandinavia Efisien"
+                    loading="lazy"
+                  />
+                  <span class="badge portfolio-badge position-absolute top-0 start-0 m-3">Skandinavia</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="fw-bold mb-2">Rumah Skandinavia Efisien (Contoh)</h5>
+                  <p class="text-secondary small mb-3">
+                    Optimalisasi lahan kavling terbatas menjadi hunian 1 lantai yang fungsional dengan pengelolaan anggaran yang efisien.
+                  </p>
+                  <div class="mt-auto pt-3 border-top d-flex flex-wrap justify-content-between gap-2 text-muted small">
+                    <span><i class="bi bi-arrows-fullscreen text-biru me-1"></i>45 m²</span>
+                    <span><i class="bi bi-layers text-biru me-1"></i>1 Lantai</span>
+                    <span><i class="bi bi-clock text-biru me-1"></i>3,5 Bulan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TAHAP 4B: FAQ ===== -->
+      <section id="faq" class="py-5 bg-surface">
+        <div class="container py-lg-3" style="max-width: 850px;">
+          <div class="text-center mb-5">
+            <span class="section-tag">FAQ</span>
+            <h2 class="fw-bold mt-2 mb-2">Pertanyaan yang Sering Diajukan</h2>
+            <p class="text-secondary mb-0">
+              Jawaban singkat seputar alur pemesanan, perencanaan biaya, dan pelaksanaan proyek.
+            </p>
+          </div>
+
+          <div class="accordion shadow-sm rounded-4 overflow-hidden" id="accordionFaq">
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Bagaimana alur pemesanan jasa di Marga Kontraktor?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFaq">
+                <div class="accordion-body text-secondary">
+                  Dimulai dari konsultasi konsep dan target budget, pembuatan denah serta gambar teknis, penyusunan dan kesepakatan RAB, lalu masuk ke tahap pembangunan rumah dengan laporan progres rutin setiap minggu.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Apakah hasil simulasi anggaran di website ini sudah menjadi RAB final?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                <div class="accordion-body text-secondary">
+                  Belum. Fitur simulasi anggaran berfungsi memberikan gambaran awal pembagian alokasi biaya sesuai budget Anda. Penyusunan RAB final tetap dihitung secara rinci setelah survei dan diskusi desain bersama Pak Arpi.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Bagaimana cara saya memantau perkembangan pembangunan rumah?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                <div class="accordion-body text-secondary">
+                  Kami mengirimkan laporan progres mingguan yang mencakup perkembangan pekerjaan di lapangan, dokumentasi foto terbaru, serta rincian penggunaan biaya secara transparan.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  Apakah bisa menggunakan jasa desain dan penyusunan RAB saja tanpa langsung bangun?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                <div class="accordion-body text-secondary">
+                  Bisa. Anda dapat memilih layanan secara bertahap, mulai dari konsultasi konsep desain, pembuatan gambar teknis/struktur, hingga penyusunan RAB terlebih dahulu sebelum memulai konstruksi.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TAHAP 5A: SIMULASI PERENCANAAN ANGGARAN ===== -->
+      <section id="anggaran" class="py-5 bg-biru-gradient text-white">
+        <div class="container py-lg-3">
+          <div class="text-center mx-auto mb-5" style="max-width: 680px;">
+            <span class="badge badge-brand mb-2 px-3 py-2 fw-semibold">
+              <i class="bi bi-stars me-1"></i> Simulasi Perencanaan Biaya
+            </span>
+            <h2 class="fw-bold mt-2 mb-2">Hitung Gambaran Pembagian Anggaran Rumah</h2>
+            <p class="text-light opacity-75 mb-0">
+              Masukkan perkiraan budget Anda untuk melihat gambaran awal alokasi biaya pembangunan sebelum menyusun RAB resmi.
+            </p>
+          </div>
+
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+              <div class="card bg-white text-dark border-0 rounded-4 p-4 shadow-lg">
+                <form id="formEstimasi" novalidate>
+                  <div class="mb-3">
+                    <label for="inputBudget" class="form-label fw-bold">Target Anggaran (Rp)</label>
+                    <input type="text" inputmode="numeric" id="inputBudget" class="form-control form-control-lg" placeholder="Contoh: 150.000.000" required />
+                    <div class="form-text">Minimal Rp25.000.000</div>
+                  </div>
+
+                  <div class="row g-3 mb-3">
+                    <div class="col-6">
+                      <label for="inputLuas" class="form-label fw-semibold">Luas Bangunan (m²)</label>
+                      <input type="number" id="inputLuas" class="form-control" value="45" min="18" max="1000" />
+                    </div>
+                    <div class="col-6">
+                      <label for="inputLantai" class="form-label fw-semibold">Jumlah Lantai</label>
+                      <select id="inputLantai" class="form-select">
+                        <option value="1" selected>1 Lantai</option>
+                        <option value="2">2 Lantai</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="inputKualitas" class="form-label fw-semibold">Tingkat Kualitas Material</label>
+                    <select id="inputKualitas" class="form-select">
+                      <option value="ekonomis">Ekonomis</option>
+                      <option value="standar" selected>Standar</option>
+                      <option value="premium">Premium</option>
+                    </select>
+                  </div>
+
+                  <div id="estimasiAlert" class="alert alert-danger d-none small py-2"></div>
+
+                  <button type="submit" class="btn btn-brand-yellow w-100 btn-lg fw-bold">
+                    <i class="bi bi-calculator me-2"></i>Hitung Gambaran Biaya
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="estimasi-result-card rounded-4 p-4 h-100">
+                <div id="hasilKosong" class="text-center py-5 text-light opacity-75">
+                  <i class="bi bi-pie-chart-fill fs-1 text-warning"></i>
+                  <p class="mt-3 mb-0">
+                    Isi target anggaran di sebelah kiri untuk melihat grafik pembagian biaya dan penjelasan singkatnya.
+                  </p>
+                </div>
+
+                <div id="hasilLoading" class="text-center py-5 d-none">
+                  <div class="spinner-border text-warning" role="status"></div>
+                  <p class="mt-3 mb-0">Sedang menghitung pembagian anggaran...</p>
+                </div>
+
+                <div id="hasilKonten" class="d-none">
+                  <h5 class="fw-bold text-warning mb-3">
+                    <i class="bi bi-bar-chart-line-fill me-2"></i>Gambaran Pembagian Anggaran
+                  </h5>
+
+                  <div class="row g-3 align-items-center mb-3">
+                    <div class="col-md-5">
+                      <canvas id="chartAnggaran" height="200"></canvas>
+                    </div>
+                    <div class="col-md-7" id="listAlokasi"></div>
+                  </div>
+
+                  <div class="p-3 rounded-3 penjelasan-ai-box mb-3">
+                    <div class="small fw-bold text-warning mb-1">
+                      <i class="bi bi-stars me-1"></i>Penjelasan Singkat
+                    </div>
+                    <p id="teksPenjelasanAI" class="small text-light mb-0"></p>
+                  </div>
+
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 pt-2 border-top border-light border-opacity-25">
+                    <small class="text-light opacity-75">
+                      *Hasil ini adalah gambaran awal, bukan RAB final yang mengikat.
+                    </small>
+                    <a id="btnWaHasil" href="https://wa.me/6287736467413" target="_blank" class="btn btn-success btn-sm fw-semibold px-3">
+                      <i class="bi bi-whatsapp me-1"></i>Konsultasi ke Pak Arpi
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TAHAP 5B: FORMULIR KONSULTASI & KONTAK ===== -->
+      <section id="konsultasi" class="py-5 bg-white">
+        <div class="container py-lg-3">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <span class="section-tag">HUBUNGI KAMI</span>
+              <h2 class="fw-bold mt-2 mb-3">Siap Diskusikan Rencana Rumah Anda?</h2>
+              <p class="text-secondary mb-4">
+                Hubungi Bapak Arpi Setiawan langsung melalui WhatsApp, email, atau tinggalkan pesan pada formulir di samping.
+              </p>
+
+              <div class="d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3 p-3 bg-surface rounded-3">
+                  <div class="contact-icon bg-success text-white">
+                    <i class="bi bi-whatsapp fs-5"></i>
+                  </div>
+                  <div>
+                    <small class="text-muted d-block">WhatsApp Resmi</small>
+                    <a href="https://wa.me/6287736467413" target="_blank" class="fw-bold text-decoration-none text-biru">
+                      +62 877-3646-7413
+                    </a>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 p-3 bg-surface rounded-3">
+                  <div class="contact-icon bg-biru text-warning">
+                    <i class="bi bi-envelope-fill fs-5"></i>
+                  </div>
+                  <div>
+                    <small class="text-muted d-block">Email</small>
+                    <span class="fw-bold text-biru">arpisetiawan41@gmail.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="card border-0 shadow-sm bg-surface rounded-4 p-4 p-md-5">
+                <h5 class="fw-bold text-biru mb-3">Formulir Permintaan Konsultasi</h5>
+                <form id="formKonsultasi" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="konsulNama" class="form-label fw-semibold">Nama Lengkap *</label>
+                      <input type="text" id="konsulNama" class="form-control" placeholder="Masukkan nama Anda" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="konsulWa" class="form-label fw-semibold">Nomor WhatsApp *</label>
+                      <input type="tel" id="konsulWa" class="form-control" placeholder="Contoh: 081234567890" required />
+                    </div>
+                    <div class="col-12">
+                      <label for="konsulPesan" class="form-label fw-semibold">Kebutuhan / Rencana Pembangunan *</label>
+                      <textarea id="konsulPesan" rows="4" class="form-control" placeholder="Ceritakan ukuran tanah, perkiraan budget, atau konsep rumah yang diinginkan..." required></textarea>
+                    </div>
+                  </div>
+
+                  <div id="konsulAlert" class="alert d-none small py-2 mt-3 mb-0"></div>
+
+                  <button type="submit" class="btn btn-brand-blue fw-semibold mt-4 px-4 py-2">
+                    <i class="bi bi-send-fill me-2"></i>Kirim Permintaan Konsultasi
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== TAHAP 6A: FOOTER ===== -->
+    <footer class="footer-section text-white pt-5 pb-4 pb-mobile-nav">
+      <div class="container">
+        <div class="row g-4 pb-4 border-bottom border-light border-opacity-25">
+          <div class="col-lg-5">
+            <img src="static/img/LOGO.PNG" alt="Marga Kontraktor" class="brand-logo mb-3" />
+            <p class="small text-light opacity-75 mb-0" style="max-width: 380px;">
+              Jasa desain arsitektur, penyusunan RAB transparan, dan pembangunan rumah tinggal milik Bapak Arpi Setiawan dengan laporan progres mingguan.
+            </p>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <h6 class="fw-bold text-warning mb-3">Menu Cepat</h6>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+              <li><a href="#profil" class="footer-link">Tentang Kami</a></li>
+              <li><a href="#layanan" class="footer-link">Katalog Layanan</a></li>
+              <li><a href="#portofolio" class="footer-link">Portofolio Proyek</a></li>
+              <li><a href="#anggaran" class="footer-link">Simulasi Anggaran</a></li>
+              <li><a href="#faq" class="footer-link">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <h6 class="fw-bold text-warning mb-3">Kontak Langsung</h6>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+              <li>
+                <a href="https://wa.me/6287736467413" target="_blank" class="footer-link">
+                  <i class="bi bi-whatsapp text-warning me-2"></i>+62 877-3646-7413
+                </a>
+              </li>
+              <li class="text-light opacity-75">
+                <i class="bi bi-envelope text-warning me-2"></i>arpisetiawan41@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pt-3 text-center small text-light opacity-75">
+          &copy; 2026 Marga Kontraktor. Dikembangkan oleh Tim Capstone A26-CS256.
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== TAHAP 6B: NAVIGASI BAWAH KHUSUS HP ===== -->
+    <nav class="mobile-bottom-nav d-lg-none shadow-lg">
+      <a href="#beranda" class="nav-item-mobile">
+        <i class="bi bi-house-door-fill"></i>
+        <span>Beranda</span>
+      </a>
+      <a href="#portofolio" class="nav-item-mobile">
+        <i class="bi bi-grid-fill"></i>
+        <span>Proyek</span>
+      </a>
+      <a href="#anggaran" class="nav-item-mobile">
+        <i class="bi bi-calculator-fill"></i>
+        <span>Anggaran</span>
+      </a>
+      <button type="button" id="btnOpenChatMobile" class="nav-item-mobile border-0 bg-transparent fw-bold">
+        <i class="bi bi-chat-dots-fill text-kuning-gelap"></i>
+        <span>Tanya AI</span>
+      </button>
+    </nav>
+
+    <!-- ===== TAHAP 6C: WIDGET CHATBOT AI ===== -->
+    <button type="button" id="btnToggleChat" class="chat-fab btn btn-brand-yellow shadow-lg d-none d-lg-flex align-items-center gap-2 fw-bold">
+      <i class="bi bi-chat-dots-fill fs-5"></i>
+      <span>Tanya AI</span>
+    </button>
+
+    <div id="chatBox" class="chat-box shadow-lg d-none">
+      <div class="chat-header bg-biru text-white d-flex justify-content-between align-items-center p-3">
+        <div class="d-flex align-items-center gap-2">
+          <div class="chat-avatar">
+            <i class="bi bi-robot"></i>
+          </div>
+          <div>
+            <div class="fw-bold small">Asisten Marga Kontraktor</div>
+            <small class="text-warning d-block" style="font-size: 0.72rem;">Konsultasi Awal Layanan</small>
+          </div>
+        </div>
+        <button type="button" id="btnCloseChat" class="btn btn-sm btn-outline-light border-0" aria-label="Tutup Chat">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div id="chatMessages" class="chat-messages p-3">
+        <div class="chat-bubble bot">
+          Halo! Saya asisten virtual Marga Kontraktor. Ada yang ingin ditanyakan seputar layanan desain, penyusunan RAB, atau pembangunan rumah tinggal?
+        </div>
+
+        <div class="d-flex flex-wrap gap-1 mt-1" id="quickQuestions">
+          <button type="button" class="btn btn-sm chat-chip" data-question="Apa saja layanan Marga Kontraktor?">Layanan apa saja?</button>
+          <button type="button" class="btn btn-sm chat-chip" data-question="Bagaimana cara menghitung estimasi biaya?">Cara hitung budget?</button>
+          <button type="button" class="btn btn-sm chat-chip" data-question="Bagaimana sistem laporan progres pembangunan?">Laporan progres?</button>
+        </div>
+      </div>
+
+      <form id="formChat" class="chat-input p-2 border-top bg-white d-flex gap-2">
+        <input type="text" id="inputChat" class="form-control form-control-sm" placeholder="Ketik pertanyaan seputar layanan..." autocomplete="off" />
+        <button type="submit" class="btn btn-brand-yellow btn-sm fw-bold px-3" aria-label="Kirim Pesan">
+          <i class="bi bi-send-fill"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Script Bootstrap, Chart.js, & App.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="static/js/app.js"></script>
+  </body>
+</html>

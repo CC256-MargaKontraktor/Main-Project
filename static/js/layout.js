@@ -1,3 +1,38 @@
+// ===== Fallback gambar terpusat =====
+// Placeholder hanya dipakai bila gambar benar-benar gagal dimuat. Path yang rusak
+// dicatat ke console (console.error) agar developer bisa memperbaikinya.
+(function () {
+    var PLACEHOLDER = "static/img/placeholder.svg";
+    window.__brokenImages = window.__brokenImages || [];
+
+    function applyFallback(img) {
+        if (!img || img.dataset.fallbackApplied === "1") return; // cegah infinite loop
+        var failed = img.currentSrc || img.src;
+        if (/placeholder\.svg(\?.*)?$/.test(failed)) return;
+        img.dataset.fallbackApplied = "1";
+        img.dataset.originalSrc = img.getAttribute("src") || failed;
+        window.__brokenImages.push({ page: location.pathname, src: img.dataset.originalSrc, alt: img.alt });
+        console.error("[IMG-FAIL] Gambar gagal dimuat: " + img.dataset.originalSrc + " (alt: \"" + img.alt + "\", halaman: " + location.pathname + ")");
+        img.removeAttribute("srcset");
+        img.src = PLACEHOLDER;
+    }
+
+    // error tidak bubbling, jadi gunakan fase capture
+    document.addEventListener("error", function (e) {
+        if (e.target && e.target.tagName === "IMG") applyFallback(e.target);
+    }, true);
+
+    // tangani gambar yang sudah gagal sebelum listener terpasang
+    function sweep() {
+        document.querySelectorAll("img").forEach(function (img) {
+            if (img.complete && img.naturalWidth === 0 && img.getAttribute("src")) applyFallback(img);
+        });
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", sweep);
+    else sweep();
+    window.addEventListener("load", sweep);
+})();
+
 (function () {
     // Deteksi halaman yang sedang dibuka (aman untuk lokal maupun GitHub Pages)
     const path = window.location.pathname.split("/").pop();

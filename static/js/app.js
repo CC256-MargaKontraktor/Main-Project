@@ -20,48 +20,19 @@ const carouselEl = document.getElementById("carouselProyek");
 if (portfolioGrid && carouselEl) {
     const galeriProyek = {
         "proyek-1": [
-            {
-                src: "static/img/proyek-1/3d-fasad.PNG",
-                tahap: "Desain 3D",
-                ket: "Visualisasi 3D fasad depan dengan jendela bulat dan menara roster."
-            },
-            {
-                src: "static/img/proyek-1/3d-interior.PNG",
-                tahap: "Desain 3D",
-                ket: "Visualisasi 3D ruang dalam, taman tengah, dan tangga putar."
-            },
-            {
-                src: "static/img/proyek-1/finishing-fasad.jpeg",
-                tahap: "Tahap Finishing",
-                ket: "Realisasi fasad depan malam hari sesuai konsep desain 3D."
-            },
-            {
-                src: "static/img/proyek-1/finishing-courtyard-siang.jpeg",
-                tahap: "Tahap Finishing",
-                ket: "Tampilan siang area bukaan pintu kaca dan dinding courtyard."
-            }
+            { src: "static/img/proyek-1/3d-fasad.webp", tahap: "Desain 3D", ket: "Visualisasi 3D fasad depan dengan jendela bulat dan menara roster." },
+            { src: "static/img/proyek-1/3d-interior.webp", tahap: "Desain 3D", ket: "Visualisasi 3D ruang dalam, taman tengah, dan tangga putar." },
+            { src: "static/img/proyek-1/progres-depan.webp", tahap: "Progres Lapangan", ket: "Progres pekerjaan dinding dan struktur atap tampak depan bangunan." },
+            { src: "static/img/proyek-1/progres-dalam.webp", tahap: "Progres Lapangan", ket: "Progres pekerjaan struktur dan dinding pada area dalam rumah." },
+            { src: "static/img/proyek-1/finishing-fasad.webp", tahap: "Tahap Finishing", ket: "Realisasi fasad depan malam hari sesuai konsep desain 3D." },
+            { src: "static/img/proyek-1/finishing-courtyard-siang.webp", tahap: "Tahap Finishing", ket: "Tampilan siang area bukaan pintu kaca dan dinding courtyard." },
+            { src: "static/img/proyek-1/finishing-courtyard-malam.webp", tahap: "Tahap Finishing", ket: "Area courtyard dengan pintu kaca dan lampu downlight pada plafon." }
         ],
         "proyek-2": [
-            {
-                src: "static/img/proyek-2/3d-fasad.jpeg",
-                tahap: "Desain 3D",
-                ket: "Visualisasi 3D rumah 2 lantai modern industrial dengan aksen kayu dan tanaman balkon."
-            },
-            {
-                src: "static/img/proyek-2/finishing-fasad.jpeg",
-                tahap: "Tahap Finishing",
-                ket: "Realisasi fasad 2 lantai lengkap dengan roster, pilar batu alam, plafon kayu, dan bukaan bulat."
-            },
-            {
-                src: "static/img/proyek-2/progres-struktur.jpeg",
-                tahap: "Progres Lapangan",
-                ket: "Tahap pekerjaan struktur beton bertulang dan pasangan dinding bata 2 lantai."
-            },
-            {
-                src: "static/img/proyek-2/progres-pengecoran.jpeg",
-                tahap: "Progres Lapangan",
-                ket: "Proses pengecoran dak lantai 2 menggunakan pompa beton (concrete pump)."
-            }
+            { src: "static/img/proyek-2/3d-fasad.webp", tahap: "Desain 3D", ket: "Visualisasi 3D rumah 2 lantai modern industrial dengan aksen kayu dan tanaman balkon." },
+            { src: "static/img/proyek-2/finishing-fasad.webp", tahap: "Tahap Finishing", ket: "Realisasi fasad 2 lantai lengkap dengan roster, pilar batu alam, plafon kayu, dan bukaan bulat." },
+            { src: "static/img/proyek-2/progres-struktur.webp", tahap: "Progres Lapangan", ket: "Tahap pekerjaan struktur beton bertulang dan pasangan dinding bata 2 lantai." },
+            { src: "static/img/proyek-2/progres-pengecoran.webp", tahap: "Progres Lapangan", ket: "Proses pengecoran dak lantai 2 menggunakan pompa beton (concrete pump)." }
         ]
     };
 
@@ -134,7 +105,7 @@ if (portfolioGrid && carouselEl) {
                 .map(
                     (item, idx) => `
                     <div class="carousel-item ${idx === 0 ? "active" : ""}">
-                        <img src="${item.src}" onerror="this.onerror=null;this.src='static/img/placeholder.svg';" alt="${item.ket}" />
+                        <img src="${item.src}" alt="${item.ket}" decoding="async" />
                     </div>`
                 )
                 .join("");
@@ -154,7 +125,7 @@ if (portfolioGrid && carouselEl) {
                     .map(
                         (item, idx) => `
                         <button type="button" class="gallery-thumb ${idx === 0 ? "active" : ""}" data-slide-index="${idx}" aria-label="Foto ${idx + 1}">
-                            <img src="${item.src}" onerror="this.onerror=null;this.src='static/img/placeholder.svg';" alt="Thumbnail ${idx + 1}" />
+                            <img src="${item.src}" alt="Thumbnail ${idx + 1}" width="72" height="54" decoding="async" />
                         </button>`
                     )
                     .join("");

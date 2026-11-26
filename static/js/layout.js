@@ -1,3 +1,6 @@
+// ===== Konfigurasi bersama =====
+window.MARGA_CONFIG = window.MARGA_CONFIG || { waNumber: "6287736467413" };
+
 // ===== Fallback gambar terpusat =====
 // Placeholder hanya dipakai bila gambar benar-benar gagal dimuat. Path yang rusak
 // dicatat ke console (console.error) agar developer bisa memperbaikinya.

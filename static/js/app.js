@@ -261,47 +261,66 @@ if (formEstimasi && inputBudget) {
     });
 }
 
-// --- 4. Logika Formulir Konsultasi (Aktif di kontak.html) ---
+// --- 4. Formulir Konsultasi -> WhatsApp Pak Arpi (Aktif di kontak.html) ---
+// Data tidak disimpan di server; pesan disusun otomatis lalu dibuka di WhatsApp.
 const formKonsultasi = document.getElementById("formKonsultasi");
 
 if (formKonsultasi) {
+    const WA_NUMBER = (window.MARGA_CONFIG && window.MARGA_CONFIG.waNumber) || "6287736467413";
+
     formKonsultasi.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const alertEl = document.getElementById("konsulAlert");
         const btnLanjutWa = document.getElementById("btnLanjutWa");
-        const nama = document.getElementById("konsulNama").value.trim();
-        const wa = document.getElementById("konsulWa").value.trim();
-        const layanan = document.getElementById("konsulLayanan").value;
-        const pesan = document.getElementById("konsulPesan").value.trim();
+        const val = (id) => (document.getElementById(id)?.value || "").trim();
+        const nama = val("konsulNama");
+        const wa = val("konsulWa");
+        const layanan = val("konsulLayanan");
+        const pesan = val("konsulPesan");
 
         alertEl.className = "alert small py-2 mt-3 mb-0";
+        btnLanjutWa?.classList.add("d-none");
 
         if (!nama || !wa || !pesan) {
             alertEl.classList.add("alert-danger");
             alertEl.textContent = "Mohon lengkapi nama, nomor WhatsApp, dan kebutuhan Anda terlebih dahulu.";
-            btnLanjutWa?.classList.add("d-none");
             return;
         }
 
-        if (wa.replace(/\D/g, "").length < 9) {
+        if (!/^[+\d\s()-]+$/.test(wa) || wa.replace(/\D/g, "").length < 9 || wa.replace(/\D/g, "").length > 15) {
             alertEl.classList.add("alert-danger");
-            alertEl.textContent = "Format nomor WhatsApp belum valid (minimal 9 digit angka).";
-            btnLanjutWa?.classList.add("d-none");
+            alertEl.textContent = "Format nomor WhatsApp belum valid (9-15 digit angka).";
             return;
         }
 
-        alertEl.classList.add("alert-success");
-        alertEl.textContent = `Terima kasih, ${nama}! Permintaan konsultasi Anda sudah tercatat. Anda juga dapat langsung melanjutkan chat ke WhatsApp Pak Arpi.`;
+        const baris = [
+            "Halo Pak Arpi, saya ingin berkonsultasi melalui website Marga Kontraktor.",
+            "",
+            `Nama: ${nama}`,
+            `No. WhatsApp: ${wa}`,
+            `Layanan: ${layanan}`,
+            "",
+            `Kebutuhan: ${pesan}`
+        ];
+        const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(baris.join("\n"))}`;
 
+        // Tautan cadangan selalu tersedia bila pop-up diblokir browser
         if (btnLanjutWa) {
-            const teksWa = encodeURIComponent(
-                `Halo Pak Arpi, saya ${nama} (${wa}). Saya tertarik dengan layanan "${layanan}". Detail rencana: ${pesan}`
-            );
-            btnLanjutWa.href = `https://wa.me/6287736467413?text=${teksWa}`;
+            btnLanjutWa.href = url;
             btnLanjutWa.classList.remove("d-none");
         }
 
-        e.target.reset();
+        // Pesan terima kasih + tombol "Buka WhatsApp" selalu tampil setelah klik kirim
+        alertEl.classList.add("alert-success");
+        alertEl.textContent = `Terima kasih, ${nama}! WhatsApp dibuka dengan pesan yang sudah terisi. Tekan kirim di WhatsApp untuk melanjutkan.`;
+
+        // Langsung buka WhatsApp; bila pop-up diblokir, pindah di tab yang sama (selalu berhasil)
+        const win = window.open(url, "_blank");
+        if (win) {
+            win.opener = null;
+        } else {
+            window.location.href = url;
+        }
     });
 }

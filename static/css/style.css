@@ -29,8 +29,8 @@ section {
 }
 
 .brand-logo {
-  height: 44px;
-  width: 145px;
+  height: auto;
+  width: 100px;
   object-fit: cover;
   border-radius: 4px;
 }

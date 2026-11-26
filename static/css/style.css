@@ -46,7 +46,7 @@ section {
   color: var(--kuning-brand);
 }
 
-/* Tombol Brand */
+/* Tombol & Badge Brand */
 .btn-brand-yellow {
   background-color: var(--kuning-brand);
   color: var(--biru-gelap);
@@ -71,12 +71,6 @@ section {
   color: var(--kuning-brand);
 }
 
-/* ===== HERO SECTION ===== */
-.hero-section {
-  background: linear-gradient(135deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
-  min-height: 82vh;
-}
-
 .badge-brand {
   background-color: rgba(255, 198, 0, 0.16);
   color: var(--kuning-brand);
@@ -84,187 +78,7 @@ section {
   border-radius: 50px;
 }
 
-.hero-card {
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 198, 0, 0.35);
-  backdrop-filter: blur(6px);
-}
-
-.hero-mini-icon {
-  width: 38px;
-  height: 38px;
-  min-width: 38px;
-  border-radius: 10px;
-  background-color: var(--kuning-brand);
-  color: var(--biru-gelap);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-/* ===== UPGRADE KHUSUS BERANDA ===== */
-.hero-visual-wrap {
-  position: relative;
-  padding-bottom: 1.5rem;
-}
-
-.hero-visual-frame {
-  position: relative;
-  height: 400px;
-  border-radius: 1.25rem;
-  overflow: hidden;
-  border: 3px solid rgba(255, 198, 0, 0.45);
-  background-color: #0B192C;
-}
-
-.hero-visual-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-float-card {
-  position: absolute;
-  left: 1rem;
-  right: 1rem;
-  bottom: 0;
-  background: rgba(11, 25, 44, 0.92);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 198, 0, 0.35);
-  border-radius: 1rem;
-  padding: 0.9rem 1.1rem;
-}
-
-.trust-strip {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #E6EDF7;
-}
-
-.trust-item-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background-color: #E8F0FE;
-  color: var(--biru-utama);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 1.2rem;
-}
-
-/* Interactive Before-After Slider (3D vs Realisasi) */
-.ba-slider {
-  --pos: 50%;
-  position: relative;
-  height: 290px;
-  border-radius: 14px;
-  overflow: hidden;
-  background-color: #0B192C;
-  user-select: none;
-  touch-action: pan-y;
-}
-
-.ba-slider img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  pointer-events: none;
-}
-
-.ba-slider .ba-before {
-  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
-  z-index: 2;
-}
-
-.ba-line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: var(--pos);
-  width: 3px;
-  background-color: var(--kuning-brand);
-  transform: translateX(-50%);
-  z-index: 3;
-  pointer-events: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
-}
-
-.ba-handle {
-  position: absolute;
-  top: 50%;
-  left: var(--pos);
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--kuning-brand);
-  color: var(--biru-utama);
-  border: 3px solid #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  z-index: 3;
-  pointer-events: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-}
-
-.ba-handle i {
-  transform: rotate(90deg);
-}
-
-.ba-range {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  opacity: 0;
-  cursor: ew-resize;
-  z-index: 4;
-}
-
-.ba-badge {
-  position: absolute;
-  top: 12px;
-  z-index: 3;
-  pointer-events: none;
-  font-size: 0.75rem;
-  padding: 0.4rem 0.65rem;
-}
-
-/* Kolase Foto Progres Lapangan */
-.field-photo-box {
-  position: relative;
-  height: 260px;
-  border-radius: 16px;
-  overflow: hidden;
-  background-color: #E8F0FE;
-}
-
-.field-photo-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.obj-pos-35 {
-  object-position: center 35%;
-}
-
-.obj-pos-45 {
-  object-position: center 45%;
-}
-
-/* ===== PROFIL, ALUR KERJA & LAYANAN ===== */
+/* Utilitas Warna & Posisi Foto */
 .bg-surface {
   background-color: #F4F7FC;
 }
@@ -281,6 +95,141 @@ section {
   background: linear-gradient(180deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
 }
 
+.obj-pos-20 {
+  object-position: center 20%;
+}
+
+.obj-pos-35 {
+  object-position: center 35%;
+}
+
+.obj-pos-45 {
+  object-position: center 45%;
+}
+
+/* Potong tipis pinggiran putih bawaan render 3D Proyek 1 */
+.trim-edge {
+  transform: scale(1.12);
+}
+
+/* ===== BERANDA: HERO & CALLOUT SIMULASI ===== */
+.hero-editorial {
+  position: relative;
+  min-height: 70vh;
+  background-image: url("../img/proyek-2/3d-fasad.webp");
+  background-size: cover;
+  background-position: center 40%;
+  padding-bottom: 4.5rem;
+}
+
+.hero-editorial-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    95deg,
+    rgba(0, 36, 89, 0.92) 0%,
+    rgba(0, 56, 130, 0.78) 55%,
+    rgba(0, 24, 61, 0.45) 100%
+  );
+  z-index: 1;
+}
+
+.hero-editorial-content {
+  max-width: 640px;
+}
+
+.simulasi-callout-section {
+  position: relative;
+  z-index: 5;
+  margin-top: -3.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulasi-callout-bar {
+  border: 1px solid #DCE6F7;
+  border-top: 4px solid var(--kuning-brand);
+}
+
+.callout-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background-color: #E8F0FE;
+  color: var(--biru-utama);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* ===== BERANDA: BUKTI PRESISI, ALUR KERJA & TESTIMONI ===== */
+.compare-pair {
+  display: grid;
+  grid-template-columns: 1.55fr 0.85fr;
+  gap: 14px;
+}
+
+.compare-frame {
+  position: relative;
+  height: 310px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #E8F0FE;
+  border: 1px solid #DCE6F7;
+}
+
+.compare-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.compare-frame-real img {
+  object-position: center 48%;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background-color: #F4F7FC;
+  border: 1px solid #E4ECF8;
+}
+
+.field-collage {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  grid-template-rows: 215px 215px;
+  gap: 12px;
+}
+
+.field-collage-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #E8F0FE;
+}
+
+.field-collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.field-collage-tall {
+  grid-row: span 2;
+}
+
+.testi-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E6ECF5 !important;
+}
+
+/* ===== PROFIL, ALUR KERJA & LAYANAN ===== */
 .section-tag {
   display: inline-block;
   background-color: #E8F0FE;
@@ -341,7 +290,53 @@ section {
   justify-content: center;
 }
 
-/* ===== PORTOFOLIO & FAQ ===== */
+.service-detail-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.service-detail-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--biru-utama);
+  font-weight: 700;
+}
+
+/* ===== SUB-HALAMAN, PORTOFOLIO & FAQ ===== */
+.page-header {
+  background: linear-gradient(135deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
+  border-bottom: 4px solid var(--kuning-brand);
+}
+
+.page-header .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.btn-filter {
+  background-color: #FFFFFF;
+  color: var(--biru-utama);
+  border: 1.5px solid #D5E2F5;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.btn-filter:hover {
+  border-color: var(--biru-utama);
+  background-color: #E8F0FE;
+  color: var(--biru-utama);
+}
+
+.btn-filter.active {
+  background-color: var(--biru-utama);
+  color: var(--kuning-brand);
+  border-color: var(--biru-utama);
+}
+
 .portfolio-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 1px solid #E6ECF5 !important;
@@ -350,6 +345,20 @@ section {
 .portfolio-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 56, 130, 0.12) !important;
+}
+
+.portfolio-img-wrap {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  background-color: #E8F0FE;
+}
+
+.portfolio-img-wrap .portfolio-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .portfolio-badge {
@@ -370,10 +379,69 @@ section {
   box-shadow: 0 0 0 0.2rem rgba(0, 56, 130, 0.2);
 }
 
+/* ===== GALERI MODAL PORTOFOLIO ===== */
+.gallery-stage {
+  background-color: #0B192C;
+  height: 390px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gallery-stage img {
+  width: 100%;
+  height: 390px;
+  object-fit: contain;
+}
+
+.gallery-caption-bar {
+  background-color: #F4F7FC;
+  border: 1px solid #DCE6F7;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.gallery-thumb {
+  width: 72px;
+  height: 54px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 0;
+  background-color: #0B192C;
+  transition: all 0.2s ease;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-thumb:hover,
+.gallery-thumb.active {
+  opacity: 1;
+  border-color: var(--kuning-brand);
+}
+
 /* ===== SIMULASI ANGGARAN & FORM KONSULTASI ===== */
 .estimasi-result-card {
   background-color: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 198, 0, 0.35);
+}
+
+.chart-wrap {
+  max-width: 220px;
+  margin: 0 auto;
 }
 
 .penjelasan-ai-box {
@@ -525,141 +593,10 @@ section {
   border-color: var(--kuning-brand);
 }
 
-/* ===== SUB-HALAMAN & FILTER PORTOFOLIO ===== */
-.page-header {
-  background: linear-gradient(135deg, var(--biru-utama) 0%, var(--biru-gelap) 100%);
-  border-bottom: 4px solid var(--kuning-brand);
-}
-
-.page-header .breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.btn-filter {
-  background-color: #FFFFFF;
-  color: var(--biru-utama);
-  border: 1.5px solid #D5E2F5;
-  border-radius: 50px;
-  padding: 8px 20px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-}
-
-.btn-filter:hover {
-  border-color: var(--biru-utama);
-  background-color: #E8F0FE;
-  color: var(--biru-utama);
-}
-
-.btn-filter.active {
-  background-color: var(--biru-utama);
-  color: var(--kuning-brand);
-  border-color: var(--biru-utama);
-}
-
-.service-detail-list li {
-  position: relative;
-  padding-left: 1.35rem;
-  margin-bottom: 0.35rem;
-}
-
-.service-detail-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--biru-utama);
-  font-weight: 700;
-}
-
-/* ===== GALERI MODAL PORTOFOLIO (SLIDER + THUMBNAIL) ===== */
-.gallery-stage {
-  background-color: #0B192C;
-  height: 390px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.gallery-stage img {
-  width: 100%;
-  height: 390px;
-  object-fit: contain;
-}
-
-.gallery-caption-bar {
-  background-color: #F4F7FC;
-  border: 1px solid #DCE6F7;
-  border-radius: 10px;
-  padding: 10px 14px;
-}
-
-.gallery-thumbs {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 4px;
-}
-
-.gallery-thumb {
-  width: 72px;
-  height: 54px;
-  flex: 0 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 2px solid transparent;
-  opacity: 0.6;
-  cursor: pointer;
-  padding: 0;
-  background-color: #0B192C;
-  transition: all 0.2s ease;
-}
-
-.gallery-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.gallery-thumb:hover,
-.gallery-thumb.active {
-  opacity: 1;
-  border-color: var(--kuning-brand);
-}
-
-/* ===== BINGKAI GAMBAR ANTI-COLLAPSE ===== */
-.compare-img-wrap {
-  position: relative;
-  height: 220px;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #E8F0FE;
-}
-
-.compare-img-wrap img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.portfolio-img-wrap {
-  position: relative;
-  height: 210px;
-  overflow: hidden;
-  background-color: #E8F0FE;
-}
-
-.portfolio-img-wrap .portfolio-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 /* ===== RESPONSIF ===== */
 @media (max-width: 991.98px) {
-  .hero-visual-frame {
-    height: 300px;
+  .compare-frame {
+    height: 280px;
   }
 }
 
@@ -667,12 +604,6 @@ section {
   .brand-logo {
     height: 38px;
     width: 125px;
-  }
-
-  .hero-section {
-    min-height: auto;
-    padding-top: 10px;
-    padding-bottom: 20px;
   }
 
   .pb-mobile-nav {
@@ -688,12 +619,37 @@ section {
 }
 
 @media (max-width: 575.98px) {
-  .ba-slider {
-    height: 230px;
+  .hero-editorial {
+    min-height: auto;
+    padding-bottom: 3.5rem;
   }
 
-  .field-photo-box {
-    height: 200px;
+  .simulasi-callout-section {
+    margin-top: -2rem;
+  }
+
+  .compare-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-frame-3d {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .compare-frame-real {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .field-collage {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 170px 170px;
+  }
+
+  .field-collage-tall {
+    grid-column: span 2;
+    grid-row: span 1;
   }
 
   .gallery-stage,

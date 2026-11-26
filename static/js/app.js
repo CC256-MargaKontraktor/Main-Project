@@ -1,15 +1,49 @@
 let chartInstance = null;
 
-// --- 1. Logika Slider Before-After 3D vs Realisasi (Aktif di index.html) ---
-const baSliders = document.querySelectorAll(".ba-slider");
-if (baSliders.length > 0) {
-    baSliders.forEach((slider) => {
-        const range = slider.querySelector(".ba-range");
-        if (!range) return;
+// --- 1. Tab Perbandingan Desain 3D vs Realisasi (Aktif di index.html) ---
+const compareTabs = document.querySelectorAll(".btn-compare-tab");
+const compareBeforeImg = document.getElementById("compareBeforeImg");
+const compareAfterImg = document.getElementById("compareAfterImg");
 
-        const updatePos = () => slider.style.setProperty("--pos", `${range.value}%`);
-        range.addEventListener("input", updatePos);
-        updatePos();
+if (compareTabs.length > 0 && compareBeforeImg && compareAfterImg) {
+    const dataPerbandingan = {
+        "proyek-2": {
+            before: "static/img/proyek-2/3d-fasad.webp",
+            after: "static/img/proyek-2/finishing-fasad.webp",
+            afterPos: "center 48%",
+            trimBefore: false,
+            judul: "Rumah 2 Lantai Modern Industrial",
+            desc: "Fasad monokrom gelap, plafon motif kayu, dinding roster, pilar batu alam, dan bukaan bulat pagar depan sesuai rancangan 3D.",
+            link: "portofolio.html?proyek=proyek-2"
+        },
+        "proyek-1": {
+            before: "static/img/proyek-1/3d-fasad.webp",
+            after: "static/img/proyek-1/finishing-fasad.webp",
+            afterPos: "center 42%",
+            trimBefore: true,
+            judul: "Hunian 1 Lantai + Mezzanine",
+            desc: "Menara roster, plafon motif kayu dengan lampu warm white, hingga jendela bulat terealisasi persis mengikuti desain 3D.",
+            link: "portofolio.html?proyek=proyek-1"
+        }
+    };
+
+    compareTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            const item = dataPerbandingan[tab.dataset.compareTarget];
+            if (!item) return;
+
+            compareTabs.forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            compareBeforeImg.src = item.before;
+            compareBeforeImg.classList.toggle("trim-edge", item.trimBefore);
+            compareAfterImg.src = item.after;
+            compareAfterImg.style.objectPosition = item.afterPos;
+
+            document.getElementById("compareTitle").textContent = item.judul;
+            document.getElementById("compareDesc").textContent = item.desc;
+            document.getElementById("compareLink").href = item.link;
+        });
     });
 }
 
@@ -20,19 +54,171 @@ const carouselEl = document.getElementById("carouselProyek");
 if (portfolioGrid && carouselEl) {
     const galeriProyek = {
         "proyek-1": [
-            { src: "static/img/proyek-1/3d-fasad.webp", tahap: "Desain 3D", ket: "Visualisasi 3D fasad depan dengan jendela bulat dan menara roster." },
-            { src: "static/img/proyek-1/3d-interior.webp", tahap: "Desain 3D", ket: "Visualisasi 3D ruang dalam, taman tengah, dan tangga putar." },
-            { src: "static/img/proyek-1/progres-depan.webp", tahap: "Progres Lapangan", ket: "Progres pekerjaan dinding dan struktur atap tampak depan bangunan." },
-            { src: "static/img/proyek-1/progres-dalam.webp", tahap: "Progres Lapangan", ket: "Progres pekerjaan struktur dan dinding pada area dalam rumah." },
-            { src: "static/img/proyek-1/finishing-fasad.webp", tahap: "Tahap Finishing", ket: "Realisasi fasad depan malam hari sesuai konsep desain 3D." },
-            { src: "static/img/proyek-1/finishing-courtyard-siang.webp", tahap: "Tahap Finishing", ket: "Tampilan siang area bukaan pintu kaca dan dinding courtyard." },
-            { src: "static/img/proyek-1/finishing-courtyard-malam.webp", tahap: "Tahap Finishing", ket: "Area courtyard dengan pintu kaca dan lampu downlight pada plafon." }
+            {
+                src: "static/img/proyek-1/3d-fasad.webp",
+                tahap: "Desain 3D",
+                ket: "Visualisasi 3D fasad depan dengan jendela bulat dan menara roster."
+            },
+            {
+                src: "static/img/proyek-1/3d-interior.webp",
+                tahap: "Desain 3D",
+                ket: "Visualisasi 3D ruang dalam, taman tengah, dan tangga putar."
+            },
+            {
+                src: "static/img/proyek-1/finishing-fasad.webp",
+                tahap: "Tahap Finishing",
+                ket: "Realisasi fasad depan malam hari sesuai konsep desain 3D."
+            },
+            {
+                src: "static/img/proyek-1/finishing-courtyard-malam.webp",
+                tahap: "Tahap Finishing",
+                ket: "Realisasi taman dalam, pintu kaca lipat, dan tangga putar ke mezzanine."
+            },
+            {
+                src: "static/img/proyek-1/finishing-courtyard-siang.webp",
+                tahap: "Tahap Finishing",
+                ket: "Tampilan siang area bukaan pintu kaca dan dinding courtyard."
+            },
+            {
+                src: "static/img/proyek-1/progres-depan.webp",
+                tahap: "Progres Lapangan",
+                ket: "Dokumentasi pengerjaan struktur dinding dan fasad depan."
+            },
+            {
+                src: "static/img/proyek-1/progres-dalam.webp",
+                tahap: "Progres Lapangan",
+                ket: "Dokumentasi pekerjaan struktur ruang dalam oleh tim teknis."
+            }
         ],
         "proyek-2": [
-            { src: "static/img/proyek-2/3d-fasad.webp", tahap: "Desain 3D", ket: "Visualisasi 3D rumah 2 lantai modern industrial dengan aksen kayu dan tanaman balkon." },
-            { src: "static/img/proyek-2/finishing-fasad.webp", tahap: "Tahap Finishing", ket: "Realisasi fasad 2 lantai lengkap dengan roster, pilar batu alam, plafon kayu, dan bukaan bulat." },
-            { src: "static/img/proyek-2/progres-struktur.webp", tahap: "Progres Lapangan", ket: "Tahap pekerjaan struktur beton bertulang dan pasangan dinding bata 2 lantai." },
-            { src: "static/img/proyek-2/progres-pengecoran.webp", tahap: "Progres Lapangan", ket: "Proses pengecoran dak lantai 2 menggunakan pompa beton (concrete pump)." }
+            {
+                src: "static/img/proyek-2/3d-fasad.webp",
+                tahap: "Desain 3D",
+                ket: "Visualisasi 3D rumah 2 lantai modern industrial dengan aksen kayu dan tanaman balkon."
+            },
+            {
+                src: "static/img/proyek-2/finishing-fasad.webp",
+                tahap: "Tahap Finishing",
+                ket: "Realisasi fasad 2 lantai lengkap dengan roster, pilar batu alam, plafon kayu, dan bukaan bulat."
+            },
+            {
+                src: "static/img/proyek-2/progres-struktur.webp",
+                tahap: "Progres Lapangan",
+                ket: "Tahap pekerjaan struktur beton bertulang dan pasangan dinding bata 2 lantai."
+            },
+            {
+                src: "static/img/proyek-2/progres-pengecoran.webp",
+                tahap: "Progres Lapangan",
+                ket: "Proses pengecoran dak lantai 2 menggunakan pompa beton (concrete pump)."
+            }
+        ],
+        "proyek-3": [
+            {
+                src: "static/img/proyek-3/hasil-utama.webp",
+                tahap: "Hasil Akhir",
+                ket: "Hasil renovasi eksterior 2 lantai lengkap dengan railing balkon, pilar batu alam, teras, dan taman depan."
+            },
+            {
+                src: "static/img/proyek-3/hasil-carport.webp",
+                tahap: "Hasil Akhir",
+                ket: "Detail finishing pilar batu alam hitam, pola keramik carport, dan teras depan."
+            },
+            {
+                src: "static/img/proyek-3/hasil-railing.webp",
+                tahap: "Hasil Akhir",
+                ket: "Detail pemasangan railing balkon besi minimalis hitam di lantai 2."
+            },
+            {
+                src: "static/img/proyek-3/progres-carport.webp",
+                tahap: "Progres Lapangan",
+                ket: "Dokumentasi pengerjaan struktur kanopi carport dan pemasangan batu alam pada pilar."
+            },
+            {
+                src: "static/img/proyek-3/progres-teras.webp",
+                tahap: "Progres Lapangan",
+                ket: "Tahap pemasangan keramik teras dan persiapan lahan sebelum penataan taman depan."
+            }
+        ],
+        "proyek-4": [
+            {
+                src: "static/img/proyek-4/finishing-fasad.webp",
+                tahap: "Tahap Finishing",
+                ket: "Tampak fasad modern minimalis 2 lantai + semi-basement dengan kombinasi panel motif garis vertikal dan aksen gelap."
+            },
+            {
+                src: "static/img/proyek-4/finishing-penuh.webp",
+                tahap: "Tahap Finishing",
+                ket: "Tampak penuh bangunan hingga atap miring dengan bukaan kaca atas (clerestory) untuk pencahayaan alami."
+            },
+            {
+                src: "static/img/proyek-4/detail-batu-alam.webp",
+                tahap: "Detail Material",
+                ket: "Detail pemasangan batu alam hitam bertekstur pada dinding depan dipadukan panel vertikal abu-abu."
+            },
+            {
+                src: "static/img/proyek-4/detail-tangga-masuk.webp",
+                tahap: "Detail Arsitektur",
+                ket: "Area tangga akses masuk dari carport semi-basement menuju lantai utama dengan desain geometris bersih."
+            },
+            {
+                src: "static/img/proyek-4/progres-fasad.webp",
+                tahap: "Progres Lapangan",
+                ket: "Dokumentasi pengerjaan struktur dinding bata ringan dan penyelesaian fasad bangunan."
+            }
+        ],
+        "proyek-5": [
+            {
+                src: "static/img/proyek-5/finishing-fasad.webp",
+                tahap: "Tahap Finishing",
+                ket: "Tampak fasad rumah 2 lantai dengan dinding batu alam abu-abu, plafon motif kayu, pencahayaan downlight, dan bukaan jendela lebar."
+            },
+            {
+                src: "static/img/proyek-5/finishing-kanopi.webp",
+                tahap: "Tahap Finishing",
+                ket: "Detail kanopi carport dengan bukaan skylight pencahayaan alami, pilar batu alam, dan pintu kayu utama."
+            },
+            {
+                src: "static/img/proyek-5/progres-pengukuran.webp",
+                tahap: "Progres Lapangan",
+                ket: "Pengecekan presisi ukuran di lapangan bersama tim teknis mengacu pada gambar kerja."
+            },
+            {
+                src: "static/img/proyek-5/progres-rangka.webp",
+                tahap: "Progres Lapangan",
+                ket: "Tahap pemasangan rangka plafon kanopi, profil batu alam fasad, dan penyelesaian area balkon lantai 2."
+            },
+            {
+                src: "static/img/proyek-5/progres-struktur.webp",
+                tahap: "Progres Lapangan",
+                ket: "Tahap awal struktur dak beton carport, plesteran dinding fasad, dan pemasangan kusen pintu utama."
+            }
+        ],
+        "proyek-6": [
+            {
+                src: "static/img/proyek-6/hasil-carport.webp",
+                tahap: "Hasil Akhir",
+                ket: "Carport dak beton luas dengan 6 pilar batu alam, plafon skylight 4 kotak, lampu downlight, dan balkon lantai 2."
+            },
+            {
+                src: "static/img/proyek-6/hasil-tampak-depan.webp",
+                tahap: "Hasil Akhir",
+                ket: "Tampak depan menyeluruh memperlihatkan pola keramik carport diagonal, railing besi cokelat, dan fasad 2 lantai."
+            },
+            {
+                src: "static/img/proyek-6/detail-pilar-skylight.webp",
+                tahap: "Detail Finishing",
+                ket: "Detail kerapian pemasangan batu alam pada deretan pilar, dinding batu sikat abu-abu, dan lisplang cokelat."
+            },
+            {
+                src: "static/img/proyek-6/detail-balkon-kanopi.webp",
+                tahap: "Detail Finishing",
+                ket: "Area balkon lantai 2 dilengkapi kanopi kaca rangka besi cokelat, lampu dinding, dan aksen dinding batu alam."
+            },
+            {
+                src: "static/img/proyek-6/progres-kanopi.webp",
+                tahap: "Progres Lapangan",
+                ket: "Tahap finishing pemasangan dan pengecekan kanopi transparan di area balkon lantai 2."
+            }
         ]
     };
 
@@ -105,7 +291,7 @@ if (portfolioGrid && carouselEl) {
                 .map(
                     (item, idx) => `
                     <div class="carousel-item ${idx === 0 ? "active" : ""}">
-                        <img src="${item.src}" alt="${item.ket}" decoding="async" />
+                        <img src="${item.src}" onerror="this.onerror=null;this.src='static/img/placeholder.svg';" alt="${item.ket}" decoding="async" />
                     </div>`
                 )
                 .join("");
@@ -125,7 +311,7 @@ if (portfolioGrid && carouselEl) {
                     .map(
                         (item, idx) => `
                         <button type="button" class="gallery-thumb ${idx === 0 ? "active" : ""}" data-slide-index="${idx}" aria-label="Foto ${idx + 1}">
-                            <img src="${item.src}" alt="Thumbnail ${idx + 1}" width="72" height="54" decoding="async" />
+                            <img src="${item.src}" onerror="this.onerror=null;this.src='static/img/placeholder.svg';" alt="Thumbnail ${idx + 1}" width="72" height="54" decoding="async" />
                         </button>`
                     )
                     .join("");
@@ -149,7 +335,7 @@ if (portfolioGrid && carouselEl) {
         });
     });
 
-    // Buka modal otomatis jika diakses dari kartu Beranda (?proyek=proyek-1 / proyek-2)
+    // Buka modal otomatis jika diakses dari kartu Beranda (?proyek=proyek-1 s/d proyek-6)
     const urlParams = new URLSearchParams(window.location.search);
     const proyekId = urlParams.get("proyek");
     if (proyekId) {

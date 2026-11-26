@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Proyek — Marga Kontraktor</title>
-    <link rel="icon" type="image/png" href="static/img/LOGO.PNG" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="static/img/Favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="static/css/style.css" />
   </head>
   <body>
-
     <!-- Navbar otomatis diisi oleh layout.js -->
     <div id="site-header"></div>
 
@@ -20,13 +25,23 @@
         <div class="container py-lg-2">
           <nav aria-label="breadcrumb" class="mb-2">
             <ol class="breadcrumb small mb-0">
-              <li class="breadcrumb-item"><a href="index.html" class="text-warning text-decoration-none">Beranda</a></li>
-              <li class="breadcrumb-item active text-light opacity-75" aria-current="page">Portofolio</li>
+              <li class="breadcrumb-item">
+                <a href="index.html" class="text-warning text-decoration-none"
+                  >Beranda</a
+                >
+              </li>
+              <li
+                class="breadcrumb-item active text-light opacity-75"
+                aria-current="page"
+              >
+                Portofolio
+              </li>
             </ol>
           </nav>
           <h1 class="fw-bold mb-2">Portofolio Proyek</h1>
-          <p class="text-light opacity-75 mb-0" style="max-width: 650px;">
-            Kumpulan proyek desain dan pembangunan rumah tinggal yang dirancang sesuai luas lahan, kebutuhan ruang, dan anggaran klien.
+          <p class="text-light opacity-75 mb-0" style="max-width: 650px">
+            Kumpulan proyek desain dan pembangunan rumah tinggal yang dirancang
+            sesuai luas lahan, kebutuhan ruang, dan anggaran klien.
           </p>
         </div>
       </section>
@@ -35,39 +50,76 @@
       <section class="py-5 bg-surface">
         <div class="container py-lg-3">
           <!-- Tombol Filter Kategori -->
-          <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" id="portfolioFilter">
-            <button type="button" class="btn btn-filter active" data-filter="semua">Semua Proyek</button>
-            <button type="button" class="btn btn-filter" data-filter="1-lantai">Rumah 1 Lantai</button>
-            <button type="button" class="btn btn-filter" data-filter="2-lantai">Rumah 2 Lantai</button>
+          <div
+            class="d-flex flex-wrap justify-content-center gap-2 mb-5"
+            id="portfolioFilter"
+          >
+            <button
+              type="button"
+              class="btn btn-filter active"
+              data-filter="semua"
+            >
+              Semua Proyek
+            </button>
+            <button type="button" class="btn btn-filter" data-filter="1-lantai">
+              Rumah 1 Lantai
+            </button>
+            <button type="button" class="btn btn-filter" data-filter="2-lantai">
+              Rumah 2 Lantai
+            </button>
           </div>
 
           <!-- Grid Proyek -->
           <div class="row g-4" id="portfolioGrid">
-
             <!-- Proyek 1 -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="1-lantai">
-              <div class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div
+              class="col-md-6 col-lg-4 portfolio-item"
+              data-category="1-lantai"
+            >
+              <div
+                class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden"
+              >
                 <div class="portfolio-img-wrap">
                   <img
-                    src="static/img/proyek-1/3d-fasad.webp" width="1600" height="800"
+                    src="static/img/proyek-1/3d-fasad.webp"
+                    width="1600"
+                    height="800"
                     class="card-img-top portfolio-img"
                     alt="Hunian Modern Tropis dan Mezzanine"
                     loading="lazy"
                   />
-                  <span class="badge portfolio-badge position-absolute top-0 start-0 m-3">Modern Tropis</span>
-                  <span class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3">
+                  <span
+                    class="badge portfolio-badge position-absolute top-0 start-0 m-3"
+                    >Modern Tropis</span
+                  >
+                  <span
+                    class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3"
+                  >
                     <i class="bi bi-images text-warning me-1"></i>7 Foto
                   </span>
                 </div>
                 <div class="card-body d-flex flex-column">
                   <h5 class="fw-bold mb-2">Hunian Modern Tropis + Mezzanine</h5>
                   <p class="text-secondary small mb-3">
-                    Desain dan pembangunan rumah tinggal 1 lantai berkonsep taman dalam (<em>inner courtyard</em>), aksen roster, jendela bulat, dan tangga putar menuju area mezzanine.
+                    Desain dan pembangunan rumah tinggal 1 lantai berkonsep
+                    taman dalam (<em>inner courtyard</em>), aksen roster,
+                    jendela bulat, dan tangga putar menuju area mezzanine.
                   </p>
-                  <div class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3">
-                    <span><i class="bi bi-arrows-fullscreen text-biru me-1"></i>Tipe Custom</span>
-                    <span><i class="bi bi-layers text-biru me-1"></i>1 Lantai + Mezzanine</span>
-                    <span><i class="bi bi-check2-circle text-biru me-1"></i>Desain &amp; Bangun</span>
+                  <div
+                    class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3"
+                  >
+                    <span
+                      ><i class="bi bi-arrows-fullscreen text-biru me-1"></i
+                      >Tipe Custom</span
+                    >
+                    <span
+                      ><i class="bi bi-layers text-biru me-1"></i>1 Lantai +
+                      Mezzanine</span
+                    >
+                    <span
+                      ><i class="bi bi-check2-circle text-biru me-1"></i>Desain
+                      &amp; Bangun</span
+                    >
                   </div>
                   <button
                     type="button"
@@ -91,29 +143,56 @@
             </div>
 
             <!-- Proyek 2 -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="2-lantai">
-              <div class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div
+              class="col-md-6 col-lg-4 portfolio-item"
+              data-category="2-lantai"
+            >
+              <div
+                class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden"
+              >
                 <div class="portfolio-img-wrap">
                   <img
-                    src="static/img/proyek-2/3d-fasad.webp" width="1600" height="900"
+                    src="static/img/proyek-2/3d-fasad.webp"
+                    width="1600"
+                    height="900"
                     class="card-img-top portfolio-img"
                     alt="Hunian Modern Industrial 2 Lantai"
                     loading="lazy"
                   />
-                  <span class="badge portfolio-badge position-absolute top-0 start-0 m-3">Modern Industrial</span>
-                  <span class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3">
+                  <span
+                    class="badge portfolio-badge position-absolute top-0 start-0 m-3"
+                    >Modern Industrial</span
+                  >
+                  <span
+                    class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3"
+                  >
                     <i class="bi bi-images text-warning me-1"></i>4 Foto
                   </span>
                 </div>
                 <div class="card-body d-flex flex-column">
-                  <h5 class="fw-bold mb-2">Hunian Modern Industrial 2 Lantai</h5>
+                  <h5 class="fw-bold mb-2">
+                    Hunian Modern Industrial 2 Lantai
+                  </h5>
                   <p class="text-secondary small mb-3">
-                    Desain dan pembangunan rumah tinggal 2 lantai bergaya maskulin monokrom dengan aksen plafon kayu, roster ventilasi, pilar batu alam, dan bukaan bulat pada pagar depan.
+                    Desain dan pembangunan rumah tinggal 2 lantai bergaya
+                    maskulin monokrom dengan aksen plafon kayu, roster
+                    ventilasi, pilar batu alam, dan bukaan bulat pada pagar
+                    depan.
                   </p>
-                  <div class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3">
-                    <span><i class="bi bi-arrows-fullscreen text-biru me-1"></i>Tipe Custom</span>
-                    <span><i class="bi bi-layers text-biru me-1"></i>2 Lantai</span>
-                    <span><i class="bi bi-check2-circle text-biru me-1"></i>Desain &amp; Bangun</span>
+                  <div
+                    class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3"
+                  >
+                    <span
+                      ><i class="bi bi-arrows-fullscreen text-biru me-1"></i
+                      >Tipe Custom</span
+                    >
+                    <span
+                      ><i class="bi bi-layers text-biru me-1"></i>2 Lantai</span
+                    >
+                    <span
+                      ><i class="bi bi-check2-circle text-biru me-1"></i>Desain
+                      &amp; Bangun</span
+                    >
                   </div>
                   <button
                     type="button"
@@ -137,32 +216,59 @@
             </div>
 
             <!-- Proyek 3 -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="2-lantai">
-              <div class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div
+              class="col-md-6 col-lg-4 portfolio-item"
+              data-category="2-lantai"
+            >
+              <div
+                class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden"
+              >
                 <div class="portfolio-img-wrap">
                   <img
                     src="static/img/proyek-3/hasil-utama.webp"
                     width="1600"
                     height="1200"
-                    onerror="this.onerror=null;this.src='static/img/placeholder.svg';"
+                    onerror="
+                      this.onerror = null;
+                      this.src = 'static/img/placeholder.svg';
+                    "
                     class="card-img-top portfolio-img"
                     alt="Renovasi Eksterior, Carport & Taman Rumah 2 Lantai"
                     loading="lazy"
                   />
-                  <span class="badge portfolio-badge position-absolute top-0 start-0 m-3">Renovasi Eksterior</span>
-                  <span class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3">
+                  <span
+                    class="badge portfolio-badge position-absolute top-0 start-0 m-3"
+                    >Renovasi Eksterior</span
+                  >
+                  <span
+                    class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3"
+                  >
                     <i class="bi bi-images text-warning me-1"></i>5 Foto
                   </span>
                 </div>
                 <div class="card-body d-flex flex-column">
-                  <h5 class="fw-bold mb-2">Renovasi Carport, Balkon &amp; Taman 2 Lantai</h5>
+                  <h5 class="fw-bold mb-2">
+                    Renovasi Carport, Balkon &amp; Taman 2 Lantai
+                  </h5>
                   <p class="text-secondary small mb-3">
-                    Pengerjaan renovasi area depan rumah 2 lantai meliputi kanopi carport dengan balkon atas, pilar batu alam, railing besi minimalis, serta penataan lanskap taman.
+                    Pengerjaan renovasi area depan rumah 2 lantai meliputi
+                    kanopi carport dengan balkon atas, pilar batu alam, railing
+                    besi minimalis, serta penataan lanskap taman.
                   </p>
-                  <div class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3">
-                    <span><i class="bi bi-arrows-fullscreen text-biru me-1"></i>Area Depan</span>
-                    <span><i class="bi bi-layers text-biru me-1"></i>2 Lantai</span>
-                    <span><i class="bi bi-tools text-biru me-1"></i>Renovasi &amp; Lanskap</span>
+                  <div
+                    class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3"
+                  >
+                    <span
+                      ><i class="bi bi-arrows-fullscreen text-biru me-1"></i
+                      >Area Depan</span
+                    >
+                    <span
+                      ><i class="bi bi-layers text-biru me-1"></i>2 Lantai</span
+                    >
+                    <span
+                      ><i class="bi bi-tools text-biru me-1"></i>Renovasi &amp;
+                      Lanskap</span
+                    >
                   </div>
                   <button
                     type="button"
@@ -186,32 +292,61 @@
             </div>
 
             <!-- Proyek 4 -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="2-lantai">
-              <div class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div
+              class="col-md-6 col-lg-4 portfolio-item"
+              data-category="2-lantai"
+            >
+              <div
+                class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden"
+              >
                 <div class="portfolio-img-wrap">
                   <img
                     src="static/img/proyek-4/finishing-fasad.webp"
                     width="900"
                     height="1600"
-                    onerror="this.onerror=null;this.src='static/img/placeholder.svg';"
+                    onerror="
+                      this.onerror = null;
+                      this.src = 'static/img/placeholder.svg';
+                    "
                     class="card-img-top portfolio-img obj-pos-35"
                     alt="Hunian Minimalis Split-Level 2 Lantai dan Semi-Basement"
                     loading="lazy"
                   />
-                  <span class="badge portfolio-badge position-absolute top-0 start-0 m-3">Minimalis Split-Level</span>
-                  <span class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3">
+                  <span
+                    class="badge portfolio-badge position-absolute top-0 start-0 m-3"
+                    >Minimalis Split-Level</span
+                  >
+                  <span
+                    class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3"
+                  >
                     <i class="bi bi-images text-warning me-1"></i>5 Foto
                   </span>
                 </div>
                 <div class="card-body d-flex flex-column">
-                  <h5 class="fw-bold mb-2">Hunian Minimalis 2 Lantai + Semi-Basement</h5>
+                  <h5 class="fw-bold mb-2">
+                    Hunian Minimalis 2 Lantai + Semi-Basement
+                  </h5>
                   <p class="text-secondary small mb-3">
-                    Pembangunan rumah tinggal modern minimalis berkonsep <em>split-level</em> dengan area carport semi-basement, atap miring berkaca atas, panel fasad vertikal, dan batu alam hitam.
+                    Pembangunan rumah tinggal modern minimalis berkonsep
+                    <em>split-level</em> dengan area carport semi-basement, atap
+                    miring berkaca atas, panel fasad vertikal, dan batu alam
+                    hitam.
                   </p>
-                  <div class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3">
-                    <span><i class="bi bi-arrows-fullscreen text-biru me-1"></i>Tipe Custom</span>
-                    <span><i class="bi bi-layers text-biru me-1"></i>2 Lt + Semi-Basement</span>
-                    <span><i class="bi bi-check2-circle text-biru me-1"></i>Bangun Baru</span>
+                  <div
+                    class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3"
+                  >
+                    <span
+                      ><i class="bi bi-arrows-fullscreen text-biru me-1"></i
+                      >Tipe Custom</span
+                    >
+                    <span
+                      ><i class="bi bi-layers text-biru me-1"></i>2 Lt +
+                      Semi-Basement</span
+                    >
+                    <span
+                      ><i class="bi bi-check2-circle text-biru me-1"></i>Bangun
+                      Baru</span
+                    >
                   </div>
                   <button
                     type="button"
@@ -235,32 +370,60 @@
             </div>
 
             <!-- Proyek 5 -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="2-lantai">
-              <div class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div
+              class="col-md-6 col-lg-4 portfolio-item"
+              data-category="2-lantai"
+            >
+              <div
+                class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden"
+              >
                 <div class="portfolio-img-wrap">
                   <img
                     src="static/img/proyek-5/finishing-fasad.webp"
                     width="900"
                     height="1600"
-                    onerror="this.onerror=null;this.src='static/img/placeholder.svg';"
+                    onerror="
+                      this.onerror = null;
+                      this.src = 'static/img/placeholder.svg';
+                    "
                     class="card-img-top portfolio-img obj-pos-35"
                     alt="Hunian Modern Tropis 2 Lantai Batu Alam dan Plafon Kayu"
                     loading="lazy"
                   />
-                  <span class="badge portfolio-badge position-absolute top-0 start-0 m-3">Modern Tropis</span>
-                  <span class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3">
+                  <span
+                    class="badge portfolio-badge position-absolute top-0 start-0 m-3"
+                    >Modern Tropis</span
+                  >
+                  <span
+                    class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3"
+                  >
                     <i class="bi bi-images text-warning me-1"></i>5 Foto
                   </span>
                 </div>
                 <div class="card-body d-flex flex-column">
-                  <h5 class="fw-bold mb-2">Hunian 2 Lantai Fasad Batu Alam &amp; Plafon Kayu</h5>
+                  <h5 class="fw-bold mb-2">
+                    Hunian 2 Lantai Fasad Batu Alam &amp; Plafon Kayu
+                  </h5>
                   <p class="text-secondary small mb-3">
-                    Pembangunan rumah tinggal 2 lantai dengan dominasi aksen batu alam abu-abu, plafon motif kayu ber-<em>downlight</em>, bukaan jendela lebar lantai atas, serta kanopi carport dengan <em>skylight</em>.
+                    Pembangunan rumah tinggal 2 lantai dengan dominasi aksen
+                    batu alam abu-abu, plafon motif kayu ber-<em>downlight</em>,
+                    bukaan jendela lebar lantai atas, serta kanopi carport
+                    dengan <em>skylight</em>.
                   </p>
-                  <div class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3">
-                    <span><i class="bi bi-arrows-fullscreen text-biru me-1"></i>Tipe Custom</span>
-                    <span><i class="bi bi-layers text-biru me-1"></i>2 Lantai</span>
-                    <span><i class="bi bi-check2-circle text-biru me-1"></i>Bangun Baru</span>
+                  <div
+                    class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3"
+                  >
+                    <span
+                      ><i class="bi bi-arrows-fullscreen text-biru me-1"></i
+                      >Tipe Custom</span
+                    >
+                    <span
+                      ><i class="bi bi-layers text-biru me-1"></i>2 Lantai</span
+                    >
+                    <span
+                      ><i class="bi bi-check2-circle text-biru me-1"></i>Bangun
+                      Baru</span
+                    >
                   </div>
                   <button
                     type="button"
@@ -284,32 +447,59 @@
             </div>
 
             <!-- Proyek 6 -->
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="2-lantai">
-              <div class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div
+              class="col-md-6 col-lg-4 portfolio-item"
+              data-category="2-lantai"
+            >
+              <div
+                class="card portfolio-card h-100 border-0 shadow-sm rounded-4 overflow-hidden"
+              >
                 <div class="portfolio-img-wrap">
                   <img
                     src="static/img/proyek-6/hasil-carport.webp"
                     width="1600"
                     height="1200"
-                    onerror="this.onerror=null;this.src='static/img/placeholder.svg';"
+                    onerror="
+                      this.onerror = null;
+                      this.src = 'static/img/placeholder.svg';
+                    "
                     class="card-img-top portfolio-img"
                     alt="Renovasi Carport Skylight, Pilar Batu Alam dan Balkon 2 Lantai"
                     loading="lazy"
                   />
-                  <span class="badge portfolio-badge position-absolute top-0 start-0 m-3">Renovasi &amp; Balkon</span>
-                  <span class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3">
+                  <span
+                    class="badge portfolio-badge position-absolute top-0 start-0 m-3"
+                    >Renovasi &amp; Balkon</span
+                  >
+                  <span
+                    class="badge bg-dark bg-opacity-75 position-absolute bottom-0 end-0 m-3"
+                  >
                     <i class="bi bi-images text-warning me-1"></i>5 Foto
                   </span>
                 </div>
                 <div class="card-body d-flex flex-column">
-                  <h5 class="fw-bold mb-2">Renovasi Carport Skylight &amp; Balkon 2 Lantai</h5>
+                  <h5 class="fw-bold mb-2">
+                    Renovasi Carport Skylight &amp; Balkon 2 Lantai
+                  </h5>
                   <p class="text-secondary small mb-3">
-                    Pembangunan dak carport beton dengan <em>skylight</em> 4 kotak dan 6 pilar batu alam yang difungsikan sekaligus sebagai balkon lantai 2 ber-railing besi dan kanopi kaca.
+                    Pembangunan dak carport beton dengan <em>skylight</em> 4
+                    kotak dan 6 pilar batu alam yang difungsikan sekaligus
+                    sebagai balkon lantai 2 ber-railing besi dan kanopi kaca.
                   </p>
-                  <div class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3">
-                    <span><i class="bi bi-arrows-fullscreen text-biru me-1"></i>Area Depan</span>
-                    <span><i class="bi bi-layers text-biru me-1"></i>2 Lantai</span>
-                    <span><i class="bi bi-tools text-biru me-1"></i>Renovasi Fasad</span>
+                  <div
+                    class="d-flex flex-wrap justify-content-between gap-2 text-muted small py-2 border-top border-bottom mb-3"
+                  >
+                    <span
+                      ><i class="bi bi-arrows-fullscreen text-biru me-1"></i
+                      >Area Depan</span
+                    >
+                    <span
+                      ><i class="bi bi-layers text-biru me-1"></i>2 Lantai</span
+                    >
+                    <span
+                      ><i class="bi bi-tools text-biru me-1"></i>Renovasi
+                      Fasad</span
+                    >
                   </div>
                   <button
                     type="button"
@@ -331,7 +521,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -340,13 +529,20 @@
       <section class="py-5 bg-white border-top">
         <div class="container text-center py-2">
           <p class="text-muted small mb-3">
-            *Demi menjaga privasi klien, alamat lengkap proyek dan rincian nominal kontrak tidak ditampilkan secara publik.
+            *Demi menjaga privasi klien, alamat lengkap proyek dan rincian
+            nominal kontrak tidak ditampilkan secara publik.
           </p>
           <div class="d-flex flex-wrap justify-content-center gap-2">
-            <a href="simulasi.html" class="btn btn-brand-yellow fw-bold px-4 py-2">
+            <a
+              href="simulasi.html"
+              class="btn btn-brand-yellow fw-bold px-4 py-2"
+            >
               <i class="bi bi-calculator me-2"></i>Simulasikan Budget Anda
             </a>
-            <a href="kontak.html" class="btn btn-outline-primary fw-semibold px-4 py-2">
+            <a
+              href="kontak.html"
+              class="btn btn-outline-primary fw-semibold px-4 py-2"
+            >
               Tanya Proyek Serupa
             </a>
           </div>
@@ -355,39 +551,84 @@
     </main>
 
     <!-- Modal Detail & Galeri Foto Proyek -->
-    <div class="modal fade" id="modalProyek" tabindex="-1" aria-labelledby="modalProyekLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="modalProyek"
+      tabindex="-1"
+      aria-labelledby="modalProyekLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content border-0 rounded-4 overflow-hidden shadow-lg">
           <div class="modal-header bg-biru text-white border-0">
             <div>
-              <span id="modalGaya" class="badge badge-brand mb-1">Modern Tropis</span>
-              <h5 class="modal-title fw-bold" id="modalProyekLabel">Judul Proyek</h5>
+              <span id="modalGaya" class="badge badge-brand mb-1"
+                >Modern Tropis</span
+              >
+              <h5 class="modal-title fw-bold" id="modalProyekLabel">
+                Judul Proyek
+              </h5>
             </div>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
           </div>
 
           <div class="modal-body p-4">
             <!-- Slider Galeri Foto Proyek -->
-            <div id="carouselProyek" class="carousel slide gallery-stage mb-2" data-bs-ride="false">
+            <div
+              id="carouselProyek"
+              class="carousel slide gallery-stage mb-2"
+              data-bs-ride="false"
+            >
               <div class="carousel-inner" id="modalCarouselInner"></div>
 
-              <button id="btnPrevSlide" class="carousel-control-prev" type="button" data-bs-target="#carouselProyek" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark bg-opacity-50 rounded-circle p-3" aria-hidden="true"></span>
+              <button
+                id="btnPrevSlide"
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselProyek"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon bg-dark bg-opacity-50 rounded-circle p-3"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Sebelumnya</span>
               </button>
-              <button id="btnNextSlide" class="carousel-control-next" type="button" data-bs-target="#carouselProyek" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark bg-opacity-50 rounded-circle p-3" aria-hidden="true"></span>
+              <button
+                id="btnNextSlide"
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselProyek"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon bg-dark bg-opacity-50 rounded-circle p-3"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Berikutnya</span>
               </button>
             </div>
 
             <!-- Keterangan Tahap & Nomor Foto -->
-            <div class="gallery-caption-bar d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2 small">
+            <div
+              class="gallery-caption-bar d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2 small"
+            >
               <div>
-                <span id="captionTahap" class="badge bg-biru text-warning me-2">Desain 3D</span>
-                <span id="captionTeks" class="text-secondary fw-medium">Tampak depan fasad</span>
+                <span id="captionTahap" class="badge bg-biru text-warning me-2"
+                  >Desain 3D</span
+                >
+                <span id="captionTeks" class="text-secondary fw-medium"
+                  >Tampak depan fasad</span
+                >
               </div>
-              <span id="captionCounter" class="text-muted fw-semibold">1 / 4</span>
+              <span id="captionCounter" class="text-muted fw-semibold"
+                >1 / 4</span
+              >
             </div>
 
             <!-- Baris Thumbnail Klik Cepat -->
@@ -419,13 +660,30 @@
             <p id="modalDeskripsi" class="text-secondary small mb-3"></p>
 
             <h6 class="fw-bold text-biru mb-2">Spesifikasi Utama</h6>
-            <ul id="modalSpesifikasi" class="list-unstyled service-detail-list small text-secondary mb-0"></ul>
+            <ul
+              id="modalSpesifikasi"
+              class="list-unstyled service-detail-list small text-secondary mb-0"
+            ></ul>
           </div>
 
-          <div class="modal-footer bg-surface border-0 d-flex justify-content-between">
-            <button type="button" class="btn btn-outline-secondary btn-sm px-3" data-bs-dismiss="modal">Tutup</button>
-            <a id="modalBtnWa" href="https://wa.me/6287736467413" target="_blank" class="btn btn-success btn-sm fw-semibold px-3">
-              <i class="bi bi-whatsapp me-1"></i>Konsultasi Konsep Ini ke Pak Arpi
+          <div
+            class="modal-footer bg-surface border-0 d-flex justify-content-between"
+          >
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm px-3"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+            <a
+              id="modalBtnWa"
+              href="https://wa.me/6287736467413"
+              target="_blank"
+              class="btn btn-success btn-sm fw-semibold px-3"
+            >
+              <i class="bi bi-whatsapp me-1"></i>Konsultasi Konsep Ini ke Pak
+              Arpi
             </a>
           </div>
         </div>

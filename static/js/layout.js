@@ -1,41 +1,3 @@
-// ===== Konfigurasi bersama =====
-window.MARGA_CONFIG = window.MARGA_CONFIG || { waNumber: "6287736467413" };
-
-// ===== Fallback gambar terpusat =====
-// Placeholder hanya dipakai bila gambar benar-benar gagal dimuat. Path yang rusak
-// dicatat ke console (console.error) agar developer bisa memperbaikinya.
-(function () {
-    var PLACEHOLDER = "static/img/placeholder.svg";
-    window.__brokenImages = window.__brokenImages || [];
-
-    function applyFallback(img) {
-        if (!img || img.dataset.fallbackApplied === "1") return; // cegah infinite loop
-        var failed = img.currentSrc || img.src;
-        if (/placeholder\.svg(\?.*)?$/.test(failed)) return;
-        img.dataset.fallbackApplied = "1";
-        img.dataset.originalSrc = img.getAttribute("src") || failed;
-        window.__brokenImages.push({ page: location.pathname, src: img.dataset.originalSrc, alt: img.alt });
-        console.error("[IMG-FAIL] Gambar gagal dimuat: " + img.dataset.originalSrc + " (alt: \"" + img.alt + "\", halaman: " + location.pathname + ")");
-        img.removeAttribute("srcset");
-        img.src = PLACEHOLDER;
-    }
-
-    // error tidak bubbling, jadi gunakan fase capture
-    document.addEventListener("error", function (e) {
-        if (e.target && e.target.tagName === "IMG") applyFallback(e.target);
-    }, true);
-
-    // tangani gambar yang sudah gagal sebelum listener terpasang
-    function sweep() {
-        document.querySelectorAll("img").forEach(function (img) {
-            if (img.complete && img.naturalWidth === 0 && img.getAttribute("src")) applyFallback(img);
-        });
-    }
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", sweep);
-    else sweep();
-    window.addEventListener("load", sweep);
-})();
-
 (function () {
     // Deteksi halaman yang sedang dibuka (aman untuk lokal maupun GitHub Pages)
     const path = window.location.pathname.split("/").pop();
@@ -59,12 +21,15 @@ window.MARGA_CONFIG = window.MARGA_CONFIG || { waNumber: "6287736467413" };
                     </button>
 
                     <div class="collapse navbar-collapse" id="tabMenu">
-                        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3 pt-3 pt-lg-0">
+                        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 gap-xl-3 pt-3 pt-lg-0">
                             <li class="nav-item">
                                 <a href="index.html" class="nav-link ${isActive("index.html")}">Beranda</a>
                             </li>
                             <li class="nav-item">
-                                <a href="layanan.html" class="nav-link ${isActive("layanan.html")}">Profil &amp; Layanan</a>
+                                <a href="profil.html" class="nav-link ${isActive("profil.html")}">Profil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="layanan.html" class="nav-link ${isActive("layanan.html")}">Layanan</a>
                             </li>
                             <li class="nav-item">
                                 <a href="portofolio.html" class="nav-link ${isActive("portofolio.html")}">Portofolio</a>
@@ -100,7 +65,8 @@ window.MARGA_CONFIG = window.MARGA_CONFIG || { waNumber: "6287736467413" };
                         <h6 class="fw-bold text-warning mb-3">Menu Cepat</h6>
                         <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
                             <li><a href="index.html" class="footer-link">Beranda</a></li>
-                            <li><a href="layanan.html" class="footer-link">Profil &amp; Layanan</a></li>
+                            <li><a href="profil.html" class="footer-link">Profil</a></li>
+                            <li><a href="layanan.html" class="footer-link">Layanan</a></li>
                             <li><a href="portofolio.html" class="footer-link">Portofolio Proyek</a></li>
                             <li><a href="simulasi.html" class="footer-link">Simulasi Anggaran</a></li>
                             <li><a href="kontak.html" class="footer-link">Konsultasi &amp; FAQ</a></li>
